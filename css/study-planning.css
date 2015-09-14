@@ -31,10 +31,45 @@ table tr:nth-of-type(even) td,
 table tr:nth-of-type(even) th {background-color:#f5f5f5;}
 
 
+/**/
+
+/* boxes */
+
+
+.r3 .box {
+	border:1px solid #ddd;
+	border-radius:5px;
+	margin:0 0 20px 20px;
+	padding:20px;	
+}
+
+.r3 .box:first-of-type {margin-top:1em;}
+
+.r3 .box h2 {margin-top:0;}
+
+.box-alert {
+	background:#f5f5f5;
+	padding:15px 20px;
+	border-radius:5px;	
+}
+
 
 /**/
 
+a.ou-btn {
+	display:inline-block;
+	background:#ffc23d;
+	color:#0b55a8;
+	border-radius:4px;
+	padding:8px 15px;
+	text-decoration:none;	
+	font-weight:bold;
+}
 
+a.ou-btn:hover {
+	background:#cc3300;
+	color:white;	
+}
 
 hr {
 	border:none;
