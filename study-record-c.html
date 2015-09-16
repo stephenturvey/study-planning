@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Tutorials - Open University</title>
+<title>Study record - Open University</title>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 
@@ -29,9 +29,38 @@
 
 <!-- new meta tag -->
 <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9, user-scalable=no" />
+
+<!-- new jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+
+
+$(document).ready(function(){
+	
+	$("dl.show-hide dt").addClass("plus");
+	$("dl.show-hide dd").hide();
+	$("dl.show-hide dt").click(function(){
+		$(this).toggleClass("plus minus");
+		$(this).next().slideToggle("fast");
+	return false;
+	})
+
+
+	$("a.show-hide").click(function(){
+		$(this).toggleClass("plus minus");
+		$(this).parent().parent().toggleClass("collapsed");
+		$(this).parent().next(".box-qual-inner").slideToggle("fast");
+	return false;
+	})
+	
+});
+
+</script>
+
 </head>
 
-<body class="ou-wide ou-ia-learning ou-blend study r2r3 sh-profile ou-mobile" onload="boot()">
+<body class="ou-ia-learning ou-blend study r2r3 sh-profile ou-mobile" onload="boot()">
 <script type="text/javascript">if (typeof window.ou_sitestat=='function')ou_sitestat();</script>
 <!--<script type="text/javascript" src="includes/headers-footers/ou-cookie-policy.js"></script>-->
 <div id="ou-org-header"> <a class="ou-skip" href="#">Skip to content</a> <a class="ou-link-ou" href="#"><img src="includes/headers-footers/oulogo-56.jpg" alt="The Open University" /></a>
@@ -62,8 +91,8 @@
 
 <div class="mnuwrap"><div class="sh-header" role="navigation">
 <ul>
-<li class="sh-home"><a href="studenthome-b.html">StudentHome</a></li>
-<li class="sh-profile"><a href="profile-b.html" class="selected">Profile</a></li>
+<li class="sh-home"><a href="studenthome-c.html">StudentHome</a></li>
+<li class="sh-profile"><a href="profile-c.html" class="selected">Profile</a></li>
 <li class="sh-study"><a href="study.html" onmouseover="ioe_showmenu(3)" onmouseout="ioe_hidemenu()" onclick="ioe_hidemenu()">Study</a></li>
 <li class="sh-community"><a href="#">Community</a></li>
 <li class="sh-help"><a href="#">Help Centre</a></li>
@@ -77,34 +106,228 @@
 
 
 <ol class="ou-breadcrumb">
-	<li><a href="studenthome-b.html">StudentHome</a></li>
-	<li>Profile</li>
-</ol>
+	<li><a href="studenthome-c.html">StudentHome</a></li>
+	<li><a href="profile-c.html">Profile</a></li>
+	<li>Study record</li></ol>
+
 
 <div class="r2">
 <div class="ou-content" id="ou-content">
-<h1 class="h1main">Profile</h1>
+<h1 class="h1main">Study record</h1>
 
 <div class="inview">
 
-  <ul>
-    <li><a href="study-record-b.html">Study record</a>*</li>
-    <li><a href="your-loan-b.html">Your student loan</a>*</li>
-    <li><a href="your-contact-details-b.html">Your contact details</a>*</li>
-    <li><a href="your-previous-edu-bg-b.html">Your previous education and background</a>*</li>
-    <li><a href="your-current-occupation-study-b.html">Your current occupation and study motivation</a>*</li>
-    <li><a href="your-identity-needs-b.html">Your identity, needs and cicumstances</a>*</li>
-    <li><a href="#">Online appearance</a></li>
-    <li><a href="#">Preferred settings</a></li>
-    <li><a href="#">Change your password</a></li>
-  </ul>
+<!-- no alert for Kapil
+<div class="box-alert">
+    <h2>Enrol on modules</h2>
+    <p>You can now enrol on modules starting between 1st September 2015 and 31st August 2016.</p>
+    <p><a href="#" class="ou-btn">Choose next modules</a></p>
+</div>
+
+<hr>
+-->
 
 
+<div class="box-qual">
+
+<h2>Bachelor of Engineering (Honours) <a href="#" class="show-hide minus">Expand/collapse</a> </h2>
+
+
+<div class="box-qual-inner">
+
+<ul class="qual-details">
+  <li><strong>Code</strong>: Q65</li>
+  <li><strong>Status</strong>: in progress</li>
+  <li><strong>Credits</strong>: 180 of 360</li>
+  <li><strong>Pathway</strong>: Engineering design</li>
+  <li><a href="#">See qualification website</a></li>
+</ul>
+
+<table class="qual-progress">
+  <tr>
+    <td colspan="3">
+    <div class="progress-bar"><span class="progress" style="width:50%;">50%</span></div>
+    </td>
+    </tr>
+  <tr>
+    <td>Stage 1</td>
+    <td>Stage 2</td>
+    <td>Stage 3</td>
+  </tr>
+</table>
+
+<p><a href="#" class="ou-btn">Choose next modules</a></p>
+
+<hr>
+
+<h3>Enrolled modules</h3>
+
+<p class="loan-text">Student Finance England (SFE) has approved a <a href="your-loan-a.html">loan for 2015/2016</a>.</p>
+
+<table>
+  <tr>
+    <td><a href="module-record-a-t276.html">Engineering: professions, practice and skills 2 (T276)</a></td>
+  </tr>
+  <tr>
+    <td><a href="module-record-a-t218.html">Design for engineers (T218)</a></td>
+  </tr>
+</table>
+
+
+<h3>Completed modules</h3>
+
+<table>
+  <tr>
+    <td><a href="module-record-a-t207.html"> Engineering: mechanics, materials, design (T207)</a></td>
+    <td>2014</td>
+    <td>Grade 3 pass</td>
+  </tr>
+  <tr>
+    <td><a href="#">Engineering: professions, practice and skills 1 (T176)</a></td>
+    <td>2014</td>
+    <td>Pass</td>
+  </tr>
+  <tr>
+    <td><a href="#">Exploring mathematics (MS221)</a></td>
+    <td>2013</td>
+    <td>Grade 4 pass</td>
+  </tr>
+  <tr>
+    <td><a href="#">Using mathematics (MST121)</a></td>
+    <td>2013</td>
+    <td>Grade 3 pass</td>
+  </tr>
+  <tr>
+    <td><a href="#">Engineering the future (T173)</a></td>
+    <td>2012</td>
+    <td>Distinction</td>
+  </tr>
+</table>
+
+<p class="pdf-download">Download your <a href="#">Statement of Academic Record</a> for your BA (Honours) Humanities qualification</p>
+
+<hr>
+
+<dl class="show-hide">
+
+<dt>Qualification End Date</dt>
+
+<dd>
+<p>This qualification has to be completed within 12 years. Your first credit counting towards this qualification is dated 06-Oct-2012 which means that you must complete this qualification by 06-Oct-2024.</p>
+</dd>
+
+<dt>Residential School Fees</dt>
+<dd>
+<p>This qualification contains a compulsory residential-school module. All students attending residential schools are responsible for the cost of travel to the venue, incidental expenses and an additional charge of £260 is payable for the cost of accommodation and meals.</p>
+</dd>
+
+<dt>Statement of Academic Record</dt>
+<dd>
+<p>Shows details of the credit you have obtained and counted towards this qualification so far.</p>
+
+<p class="pdf-download"><a href="#">Download statement (Adobe PDF, 60K)</a></p>
+</dd>
+ 
+  <dt>Student Support Team</dt>
+<dd>
+  <p>For administrative support and specialist advice relating to this qualification <a href="http://csintra1.open.ac.uk/students/student-support-team.aspx?q=Q65">contact your Student Support Team</a>.</p>
+</dd>
+
+  <dt>Regulations</dt>
+<dd>
+  <p>To read the General Qualification Regulations, or Conditions of Registration, please see our <a href="http://www.open.ac.uk/students/charter/essential-documents/registration-as-a-student">Essential Documents</a>. Regulations specific to your qualification can be found below:<br>
+    <a id="ctl00_cphCEN_hypQualRegulation" href="http://www.open.ac.uk/courses/contentlibrary/qualifications/undergraduate/stagebasedprospectus/q65/reg-sbq65">Bachelor of Engineering (Honours)</a></p>
+</dd>
+
+  <dt>Qualification Fee</dt>
+<dd>
+  <p>The total cost of the qualification is determined by the combined cost of the individual modules required to complete it. Each module has an individual fee. There are also additional costs associated with study such as technology, travel to tutorials, set books and internet access which are not included in module fees.</p>
+</dd>
+
+<dt>Taking a break</dt>
+<dd>
+<p>If you wish to <a href="#">take a break from this qualification</a>.</p>
+</dd>
+</dl>
+
+</div> <!-- end box-qual-inner -->
+</div> <!-- end box-qual -->
+
+
+
+<!--
+
+<div class="box-qual collapsed">
+
+<h2>Bachelor of Science (Honours) <a href="#" class="show-hide plus">Expand/collapse</a></h2>
+
+</div> 
+
+
+
+<div class="box-qual">
+
+<h2>Other modules <a href="#" class="show-hide minus">Expand/collapse</a></h2>
+
+<div class="box-qual-inner">
+
+<h3>Completed modules</h3>
+
+<table>
+  <tr>
+    <td><a href="#">U123 Astronomy</a></td>
+    <td>Pass</td>
+  </tr>
+  <tr>
+    <td><a href="#">T456 Evolution of species</a></td>
+    <td>Fail</td>
+  </tr>
+  <tr>
+    <td><a href="#">G123 Cell biology</a></td>
+    <td>Pass</td>
+  </tr>
+</table>
+
+</div> 
+</div> <!-- end box-qual -->
+
+
+<p><a href="profile.html">Back to Profile</a></p>
 
 </div>
 
 </div>
 </div>
+
+<div class="r3 aside">
+
+
+<div class="box box-questions">
+<h2>How do I?</h2>
+<ul>
+  <li><a href="#">Change my qualification?</a></li>
+  <li><a href="#">Change my module?</a></li>
+  <li><a href="#">Take a break from my studies</a>?</li>
+  <li><a href="#">Apply for a tuition fee loan?</a></li>
+  <li><a href="#">Get help studying for a disability?</a></li>
+</ul>
+  
+<p class="box-link"><a href="#">Get more from the Help Centre</a></p>
+
+</div>
+
+<div class="box box-downloads">
+<h2>Downloads</h2>
+<ul>
+  <li><a href="#">Student Academic Summary</a></li>
+  <li><a href="#">Conditions of registration</a></li>
+  <li><a href="#">Fee rules</a></li>
+  <li><a href="#">General Qualifications Regulations</a></li>
+</ul>
+</div>
+
+</div>
+
 </div>
 </div>
 <div id="ou-org-footer">
