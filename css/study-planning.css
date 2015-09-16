@@ -61,6 +61,7 @@ table.qual-progress span.progress {
 	text-indent:-5000em;	
 }
 
+table.two-cols tr td {width:50%;}
 
 
 /**/
@@ -232,6 +233,17 @@ p.note {
 	color:#555;	
 }
 
+p.module-result {
+	font-size:1.7em;
+	font-weight:bold;
+	color:#000;
+	display:inline-block;
+	border:1px solid #ddd;
+	border-radius:3px;
+	padding:10px 12px;
+	margin:20px 0 20px 0;
+}
+
 /**/
 
 
@@ -303,6 +315,21 @@ ul.list-style1 li {
 }
 
 ul.list-style1 li strong {color:#b52a1e;}
+
+ul.pdf {
+	padding:0;
+	list-style:none;
+}
+
+ul.pdf li {
+	background-image:url(../img/pdf.gif);
+	background-position:0 .2em;
+	background-repeat:no-repeat;
+	padding:0 0 0 22px;
+	margin:0 0 5px 0;
+	list-style:none;
+}
+
 
 
 /**/
