@@ -292,6 +292,11 @@ ol.ou-breadcrumb li:first-child {background-image:none;}
 
 /* misc */
 
+a.bannerhelp {
+	float:right;
+	font-size:13px;
+}
+
 .ou-block {
 	margin:0 0 30px 0;	
 }
