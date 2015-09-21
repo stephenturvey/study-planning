@@ -46,7 +46,8 @@ $(document).ready(function(){
 	return false;
 	})
 
-
+	
+	$("div.collapsed .box-qual-inner").hide();
 	$("a.show-hide").click(function(){
 		$(this).toggleClass("plus minus");
 		$(this).parent().parent().toggleClass("collapsed");
@@ -117,59 +118,220 @@ $(document).ready(function(){
 
 <div class="inview">
 
-<div class="panel">
-    <h2>Completed modules</h2>
-    <ul>
-        <li><a href="module.aspx?c=A218_2014J&amp;cr=1">A218 Medicine and society in Europe 1500-1930 (2014)</a></li>
-<li><a href="module.aspx?c=K319_2013J&amp;cr=1">K319 Adulthood, ageing and the life course (2013)</a></li>
-<li><a href="module.aspx?c=KE312_2013B&amp;cr=1">KE312 Working together for children (2013)</a></li>
-<li><a href="module.aspx?c=K218_2012B&amp;cr=1">K218 Working with children, young people and families (2012)</a></li>
-<li><a href="module.aspx?c=K101_2011B&amp;cr=1">K101 An introduction to health and social care (2011)</a></li>
-<li><a href="module.aspx?c=SA188_2009J&amp;cr=1">SA188 Archaeology: the science of investigation (2009)</a></li>
-<li><a href="module.aspx?c=SA188_2009E&amp;cr=1">SA188 Archaeology: the science of investigation (2009)</a></li>
-<li><a href="module.aspx?c=A219_2008&amp;cr=1">A219 Exploring the classical world (2008)</a></li>
-<li><a href="module.aspx?c=A177_2007J&amp;cr=1">A177 Shakespeare: an introduction (2007)</a></li>
-<li><a href="module.aspx?c=AT272_2007E&amp;cr=1">AT272 Ancient and medieval cities: a technological history (2007)</a></li>
-<li><a href="module.aspx?c=S193_2006J&amp;cr=1">S193 Fossils and the history of life (2006)</a></li>
-<li><a href="module.aspx?c=S193_2006E&amp;cr=1">S193 Fossils and the history of life (2006)</a></li>
-<li><a href="module.aspx?c=A103_2005J&amp;cr=1">A103 An introduction to the humanities (2005)</a></li>
-<li><a href="module.aspx?c=A178_2005E&amp;cr=1">A178 Perspectives on Leonardo da Vinci (2005)</a></li>
-
-   </ul>
+<div class="box-alert">
+    <h2>Not currently studying</h2>
+    <p>You have not yet selected any modules for this academic year. You may still be able to choose modules to start this year. If you’re not planning to study this year please <a href="#">tell us</a>.</p>
+    <p><a href="#" class="ou-btn">Choose next modules</a></p>
 </div>
 
+<hr>
 
-<div class="panel">
-    <h2>Completed qualifications</h2>
-    <ul>
-        <li><a href="http://learn4.open.ac.uk/course/view.php?name=QO_HSC_Q18" class="group">Bachelor of Science (Honours) in Health and Social Care (B18) - qualification website</a></li>
-<li><a href="qual.aspx?q=B18_1&amp;stay=1">Bachelor of Science (Honours) in Health and Social Care (B18) - qualification record</a></li>
-<li><a href="http://learn4.open.ac.uk/course/view.php?name=QO_HSC_Q18" class="group">Certificate in Working Together for Children (C93) - qualification website</a></li>
-<li><a href="qual.aspx?q=C93_1&amp;stay=1">Certificate in Working Together for Children (C93) - qualification record</a></li>
-<li><a href="qual.aspx?q=D34_1&amp;stay=1">Certificate in Health and Social Care (D34)</a></li>
-<li><a href="qual.aspx?q=C36_1&amp;stay=1">Certificate in Humanities (C36)</a></li>
+  <div class="box-qual">
+    <h2>Your modules <a href="#" class="show-hide minus">Expand/collapse</a></h2>
+    <div class="box-qual-inner">
 
+      <h3>Completed modules</h3>
+      <table>
+        <tr>
+          <td><a href="#">A218 Medicine and society in Europe 1500-1930</a></td>
+          <td>2014</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><a href="#">K319 Adulthood, ageing and the life course</a></td>
+          <td>2013</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><a href="#">KE312 Working together for children</a></td>
+          <td>2013</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><a href="#">K218 Working with children, young people and families</a></td>
+          <td>2012</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><a href="#">K101 An introduction to health and social care</a></td>
+          <td>2011</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><a href="#">SA188 Archaeology: the science of investigation</a></td>
+          <td>2009</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><a href="#">SA188 Archaeology: the science of investigation</a></td>
+          <td>2009</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><a href="#">A219 Exploring the classical world</a></td>
+          <td>2008</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><a href="#">A177 Shakespeare: an introduction</a></td>
+          <td>2007</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><a href="#">AT272 Ancient and medieval cities: a technological history</a></td>
+          <td>2007</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><a href="#">S193 Fossils and the history of life</a></td>
+          <td>2006</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><a href="#">S193 Fossils and the history of life</a></td>
+          <td>2006</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><a href="#">A103 An introduction to the humanities</a></td>
+          <td>2005</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><a href="#">A178 Perspectives on Leonardo da Vinci</a></td>
+          <td>2005</td>
+          <td>&nbsp;</td>
+        </tr>
+    </table>
+      <h3>Cancelled modules</h3>
+      <table>
+        <tr>
+          <td><a href="#">S103 Discovering science (2006)</a></td>
+        </tr>
+      </table>
+
+      <p class="pdf-download">Your <a href="#">Student Academic Summary</a> is available as a PDF download, and contains a summary of your modules and qualifications.</p>
+
+    </div>
+    <!-- end box-qual-inner -->
+  </div>
+  <!-- end box-qual -->
+
+
+<div class="box-qual collapsed">
+
+    <h2>Bachelor of Science (Honours) in Health and Social Care <a href="#" class="show-hide plus">Expand/collapse</a></h2>
+    
+    <div class="box-qual-inner">
+    <ul class="list-style1">
+      <li><strong>Code</strong>: B18</li>
+      <li><strong>Status</strong>: complete</li>
+      <li><strong>Credits</strong>: 360 of 360</li>
     </ul>
+    
+    <table class="qual-progress">
+      <tr>
+        <td colspan="3"><div class="progress-bar"><span class="progress" style="width:100%;">100%</span></div></td>
+      </tr>
+      <tr>
+        <td>Stage 1</td>
+        <td>Stage 2</td>
+        <td>Stage 3</td>
+      </tr>
+    </table>
+    
+    <p>There would be more information here.</p>
+    
+	</div>
+
 </div>
 
+<div class="box-qual collapsed">
 
-<div class="panel">
-    <h2>Cancelled modules</h2>
-    <ul>
-        <li><a href="module.aspx?c=S103_2006J">S103 Discovering science (2006)</a></li>
+    <h2>Certificate in Working Together for Children <a href="#" class="show-hide plus">Expand/collapse</a></h2>
+    
+    <div class="box-qual-inner">
+    <ul class="list-style1">
+      <li><strong>Code</strong>: C93</li>
+      <li><strong>Status</strong>: complete</li>
+      <li><strong>Credits</strong>: 360 of 360</li>
+    </ul>
+    
+    <table class="qual-progress">
+      <tr>
+        <td colspan="3"><div class="progress-bar"><span class="progress" style="width:100%;">100%</span></div></td>
+      </tr>
+      <tr>
+        <td>Stage 1</td>
+        <td>Stage 2</td>
+        <td>Stage 3</td>
+      </tr>
+    </table>
+    
+    <p>There would be more information here.</p>
+    
+	</div>
 
-   </ul>
-</div>
+</div> 
 
+<div class="box-qual collapsed">
 
-<a id="sas"></a><div class="panel">
-    <h2>Student Academic Summary</h2>
-    <p>Your <a href="studentacademicsummary.aspx" class="ou-pdf" target="_blank">Student Academic Summary</a> is available as a PDF download,
-    and contains a summary of your modules and qualifications.</p>
-</div>
+    <h2>Certificate in Health and Social Care <a href="#" class="show-hide plus">Expand/collapse</a></h2>
+    
+    <div class="box-qual-inner">
+    <ul class="list-style1">
+      <li><strong>Code</strong>: D34</li>
+      <li><strong>Status</strong>: complete</li>
+      <li><strong>Credits</strong>: 360 of 360</li>
+    </ul>
+    
+    <table class="qual-progress">
+      <tr>
+        <td colspan="3"><div class="progress-bar"><span class="progress" style="width:100%;">100%</span></div></td>
+      </tr>
+      <tr>
+        <td>Stage 1</td>
+        <td>Stage 2</td>
+        <td>Stage 3</td>
+      </tr>
+    </table>
+    
+    <p>There would be more information here.</p>
+    
+	</div>
+
+</div> 
+
+<div class="box-qual collapsed">
+
+    <h2>Certificate in Humanities <a href="#" class="show-hide plus">Expand/collapse</a></h2>
+    
+    <div class="box-qual-inner">
+    <ul class="list-style1">
+      <li><strong>Code</strong>: C36</li>
+      <li><strong>Status</strong>: complete</li>
+      <li><strong>Credits</strong>: 360 of 360</li>
+    </ul>
+    
+    <table class="qual-progress">
+      <tr>
+        <td colspan="3"><div class="progress-bar"><span class="progress" style="width:100%;">100%</span></div></td>
+      </tr>
+      <tr>
+        <td>Stage 1</td>
+        <td>Stage 2</td>
+        <td>Stage 3</td>
+      </tr>
+    </table>
+    
+    <p>There would be more information here.</p>
+    
+	</div>
+
+</div> 
+
 
 <p><a href="profile-t2.html">Back to Profile</a></p>
-
 </div>
 
 </div>
