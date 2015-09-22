@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Assessment calculator - StudentHome - Open University</title>
+<title>Module search - StudentHome - Open University</title>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 
@@ -166,10 +166,10 @@ function excludedcombo()
 
 </script>
 
-<div class="panel">
-    <h2 style="font-size:100%;font-weight:bold">Search for a module</h2>
+<div class="ou-block">
+    <h2>Search for a module</h2>
     <form action="https://msds.open.ac.uk/module-search/index.aspx" method="get" onsubmit="return validatemainform2()" name="mainform">
-    <table class="compact">
+    <table>
         <tbody><tr> 
             <td class="sz1">in subject area:</td>
             <td><select name="subj" class="align">
@@ -240,7 +240,7 @@ function excludedcombo()
         </tr>
         <tr>
             <td class="sz1">&nbsp;</td>
-            <td><input type="submit" value="submit">
+            <td><p><input type="submit" value="Submit"></p>
             <p>Search for a module, then check that the module you choose can count towards your <a href="next-module.aspx" class="uline">chosen qualification</a>.</p>
             </td>
         </tr>
@@ -249,8 +249,8 @@ function excludedcombo()
     </form>
 </div>
 
-<div class="panel">
-    <h2 style="font-size:100%;font-weight:bold">Module finder</h2>
+<div class="ou-block">
+    <h2>Module finder</h2>
     
     <p>If you know the module code, enter it here to see its description and to register online.
     Check that the module you choose can count towards your chosen qualification by reading your qualification description from your <a href="next-module.aspx">Next module</a> page.
@@ -259,20 +259,21 @@ function excludedcombo()
     <form method="get" action="#" onsubmit="crsefinder();return false"><table class="compact">
         <tbody><tr> 
             <td class="sz1"><input id="crsefinderid" type="text" size="10" maxlength="8"></td>
-            <td><input type="submit" value="submit"> <span id="crsenotfound" class="warning"></span></td>
+            <td><input type="submit" value="Submit"> <span id="crsenotfound" class="warning"></span></td>
         </tr>
     </tbody></table></form>
 </div>
 
+<hr>
 
-<div class="panel">
-    <h2 style="font-size:100%;font-weight:bold">Excluded combinations</h2>
+<div class="ou-block">
+    <h2>Excluded combinations</h2>
     <p>Enter a module code to see if it is an excluded combination for your <a href="next-module.aspx">chosen qualification</a>.</p>
     <form action="#" method="get" onsubmit="return excludedcombo()">
     <table class="compact">
         <tbody><tr> 
             <td class="sz1"><input id="exclmodule" type="text" size="10" maxlength="8"></td>
-            <td><input type="submit" value="submit"></td>
+            <td><input type="submit" value="Submit"></td>
         </tr>
     </tbody></table>
     </form>

@@ -8,7 +8,7 @@ body.ou-wide .r2 { width: 100% }
 
 body.ou-wide .r2 .ou-content {border-radius:0.5em;}
 
-div.inview {padding:1.4em 2em;}
+div.inview {padding:1.5em 2em;}
 
 
 /* tables */
@@ -111,9 +111,35 @@ p.box-link {
 	border-top:1px solid #e7eff7;
 }
 
+a.ou-action2 {
+	background:#f5f5f5;
+	padding:20px 50px 20px 30px;
+	margin:0 0 20px 0;
+	border-radius:0 5px 5px 0;	
+	border-left:4px solid #ccc;
+	text-decoration:none;
+	display:block;
+}
+
+a.ou-action2 .ou-title {
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#039;
+	margin:0 0 4px 0;
+}
+
+a.ou-action2 .ou-desc {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#555;
+}
+
+a.ou-action2:hover {border-left:4px solid #cc3300;}
+
+a.ou-action2:hover .ou-title {color:#cc3300;}
+
 .box-alert {
 	background:#f5f5f5;
-	padding:15px 20px;
+	padding:20px 20px 15px 20px;
 	border-radius:5px;	
 }
 
@@ -196,6 +222,8 @@ dl.show-hide dt.minus {
 }
 
 dl.show-hide dt.minus {background-image:url(../img/switch-minus.png);}
+
+dl dd {margin-top:10px;}
 	
 /**/
 
@@ -219,6 +247,8 @@ a.ou-btn:hover {
 /**/
 
 /* paragraph styles */
+
+p {margin:0 0 20px 0;}
 
 p.pdf-download {
 	background-image:url(../img/pdf.gif);
@@ -250,18 +280,22 @@ p.module-result {
 
 /* headlines */
 
+h2 {margin:0 0 20px 0;}
+
 h2.style1 {
 	background:#e7eff7;
 	color:#000;
 	border-radius:4px;
-	padding:10px 10px;	
+	padding:10px 10px;
+	margin:0 0 20px 0;	
 }
 
 h3,
 h4 {
 	font-size:1.1em;
 	font-weight:bold;
-	color:black;	
+	color:black;
+	margin:0 0 20px 0;	
 }
 
 h4 {font-size:1em;}
