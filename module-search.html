@@ -256,12 +256,9 @@ function excludedcombo()
     Check that the module you choose can count towards your chosen qualification by reading your qualification description from your <a href="next-module.aspx">Next module</a> page.
     </p>
     
-    <form method="get" action="#" onsubmit="crsefinder();return false"><table class="compact">
-        <tbody><tr> 
-            <td class="sz1"><input id="crsefinderid" type="text" size="10" maxlength="8"></td>
-            <td><input type="submit" value="Submit"> <span id="crsenotfound" class="warning"></span></td>
-        </tr>
-    </tbody></table></form>
+    <form method="get" action="#" onsubmit="crsefinder();return false">
+    <input id="crsefinderid" type="text" size="10" maxlength="8"> <input type="submit" value="Submit">
+    </form>
 </div>
 
 <hr>
@@ -270,12 +267,7 @@ function excludedcombo()
     <h2>Excluded combinations</h2>
     <p>Enter a module code to see if it is an excluded combination for your <a href="next-module.aspx">chosen qualification</a>.</p>
     <form action="#" method="get" onsubmit="return excludedcombo()">
-    <table class="compact">
-        <tbody><tr> 
-            <td class="sz1"><input id="exclmodule" type="text" size="10" maxlength="8"></td>
-            <td><input type="submit" value="Submit"></td>
-        </tr>
-    </tbody></table>
+    <input id="exclmodule" type="text" size="10" maxlength="8"> <input type="submit" value="Submit">
     </form>
 </div>
 

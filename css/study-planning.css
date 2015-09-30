@@ -68,6 +68,12 @@ table.two-cols tr td {width:50%;}
 
 /* boxes */
 
+.box {
+	border:1px solid #ddd;
+	border-radius:5px;
+	margin:0 0 20px 0;
+	padding:20px;	
+}
 
 .r3 .box {
 	border:1px solid #ddd;
@@ -344,6 +350,26 @@ ol.ou-breadcrumb li:first-child {background-image:none;}
 /**/
 
 /* misc */
+
+.box-calculator input[type=text] {
+	padding:3px 5px;	
+	font-size:1em;
+}
+
+input[type=submit] {
+	padding:5px 10px;	
+	font-size:1em;
+	
+}
+
+
+.box-calculator table tr td {vertical-align:middle;}
+
+
+img.inline-img {
+	display:inline;
+	vertical-align:middle;
+}
 
 a.bannerhelp {
 	float:right;
