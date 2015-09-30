@@ -432,6 +432,16 @@ ul.pdf li {
 /**/
 
 
+/* studenthome edits */
+
+p.user {margin-top:1em;}
+
+.panel-group h2 {margin:.5em 0;}
+
+body.sh-home .r3 .box {margin:0 0 20px 0;}
+
+/**/
+
 
 
 /* media queries */
