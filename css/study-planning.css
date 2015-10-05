@@ -312,6 +312,8 @@ h2.style1 {
 	margin:0 0 20px 0;	
 }
 
+h2#result {background:#DDECD8;} /* ass. calculator result */
+
 h3,
 h4 {
 	font-size:1.1em;
@@ -349,19 +351,32 @@ ol.ou-breadcrumb li:first-child {background-image:none;}
 	
 /**/
 
+/* form elements */
+
+input[type=text] {
+	padding:6px 12px;	
+	font-size:1em;
+}
+
+input[type=submit] {
+	padding:6px 12px;	
+	background:#eee;
+	font-weight:bold;
+	font-size:1em;
+	-webkit-appearance: none;
+	border:1px solid #ccc;
+}
+
+input[type=submit]:hover {border:1px solid #555;}
+
+/**/
+
 /* misc */
 
 .box-calculator input[type=text] {
 	padding:3px 5px;	
 	font-size:1em;
 }
-
-input[type=submit] {
-	padding:5px 10px;	
-	font-size:1em;
-	
-}
-
 
 .box-calculator table tr td {vertical-align:middle;}
 

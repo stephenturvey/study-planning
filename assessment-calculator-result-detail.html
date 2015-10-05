@@ -81,83 +81,50 @@
 	<li><a href="profile.html">Profile</a></li>
   	<li><a href="study-record.html">Study record</a></li>
 	<li><a href="module-record.html">{module-title}</a></li>
-  <li>Assessment Calculator</li>
+  	<li><a href="assessment-calculator.html">Assessment Calculator</a></li>
+  	<li>Assessment Calculator - detailed view</li>
 </ol>
 
 
 <div class="r2">
 <div class="ou-content" id="ou-content">
-<h1>Assessment Calculator</h1>
+<h1>Assessment Calculator - detailed view</h1>
 <div class="inview">
   
-
-<form name="aspnetForm" method="post" action="AssessmentCalculator.aspx" id="aspnetForm">
-
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="#">
-<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="621FECA6">
-    
-
-<h2><span class="code">B203:</span> Business functions in context</h2>
-<p>To calculate a predicted result, enter estimates for any remaining scores and click on the calculate button.</p>
+<p>This is the detailed view of the prediction calculation.</p>
 
 <div class="box box-calculator">
 
 <h2 class="style1">Your Continuous Assessment Scores</h2>
-<p> You need a minimum of <strong>40%</strong> to be sure of passing the Overall Continuous Assessment Score (OCAS) requirement. </p>
-<p>We do not have scores for you for the following assignments. 
-You can add estimated scores here and we will use them to calculate your predicted result. Remember to enter zero for any past assignment either (a) not submitted or (b) submitted too late to be counted for assessment.</p>
 
-<table class="two-cols"> 
-  <tbody> 
-<tr>
-  <th>Assignment <a href="javascript: newWindow('help_assignment.htm', 'Assignment', 'resizable=no,menubar=no,titlebar=yes,width=350,height=300,scrollbars=yes')"> <img src="img/info.png" class="inline-img" alt="Help for Assignment Number"></a></th> 
-  <th>Score</th></tr> 
-<tr> 
-<td>TMA01 </td>
-<td><input name="ASSIGNMENT_01" maxlength="3" size="2" autocomplete="off" onchange="return ValidateScore(ASSIGNMENT_01)" value="" type="text"></td> 
-</tr> 
-<tr> 
-<td>TMA02 </td>
-<td><input name="ASSIGNMENT_02" maxlength="3" size="2" autocomplete="off" onchange="return ValidateScore(ASSIGNMENT_02)" value="" type="text"></td> 
-</tr> 
-<tr> 
-<td>TMA03 </td><td><input name="ASSIGNMENT_03" maxlength="3" size="2" autocomplete="off" onchange="return ValidateScore(ASSIGNMENT_03)" value="" type="text"></td> 
-</tr> 
-<tr> 
-<td>TMA04 </td><td><input name="ASSIGNMENT_04" maxlength="3" size="2" autocomplete="off" onchange="return ValidateScore(ASSIGNMENT_04)" value="" type="text"></td> 
-</tr> 
-<tr> 
-<td>TMA05 </td><td><input name="ASSIGNMENT_05" maxlength="3" size="2" autocomplete="off" onchange="return ValidateScore(ASSIGNMENT_05)" value="" type="text"></td> 
-</tr> 
-<tr> 
-<td>TMA06 </td><td><input name="ASSIGNMENT_06" maxlength="3" size="2" autocomplete="off" onchange="return ValidateScore(ASSIGNMENT_06)" value="" type="text"></td> 
-</tr> 
-</tbody>
-</table> 
-
-
-<h2 class="style1">Your Overall Examination Score</h2> 
-
-
-<p> We will not know your Overall Examination Score (OES) <a href="javascript: newWindow('help_oes.htm', 'Assignment', 'resizable=no,menubar=no,titlebar=yes,width=350,height=240,scrollbars=yes')"><img src="img/info.png" class="inline-img" alt="Help for OES"></a> until you have completed the module, but you can enter an estimate 
-here, and we will use it to predict your result.  Your module materials will tell you which assessment tasks contribute to the OES score.</p>
-<p class="note">Note that most students score better on their assignments than in OES.</em> </p> 
-
-<table class="two-cols"> 
-<tbody>
-<tr> 
-<td>Your Estimated OES</td>
-<td><input name="ESTIMATED_OES" maxlength="3" size="3" autocomplete="off" onchange="return ValidateScore(ESTIMATED_OES)" value="" &="" type="text">%</td> 
-</tr> 
-</tbody>
-</table> 
-
-<p><input type="submit" class="submit" value="Calculate"></p> 
-
-</form>
-
-<p><em>{If form submitted</em>}</p>
-
+<table>
+  <tbody>
+    <tr>
+      <th>Assignment <a href="javascript: newWindow('help_assignment.htm', 'Assignment', 'resizable=no,menubar=no,titlebar=yes,width=350,height=300,scrollbars=yes')"> <img src="img/info.png" class="inline-img" alt="Help for Assignment Number"></a></th>
+      <th>Your score or estimate</th>
+      <th>Weighting in OCAS <a href="#"><img src="img/info.png" class="inline-img" alt="Help for weighting in OCAS"></a></th>
+      <th>Weighted score towards OCAS</th>
+    </tr>
+    <tr>
+      <td>TMA01 </td>
+      <td>99</td>
+      <td>33.00%</td>
+      <td>32.67</td>
+    </tr>
+    <tr>
+      <td>TMA02 </td>
+      <td>95</td>
+      <td>33.00%</td>
+      <td>31.35</td>
+    </tr>
+    <tr>
+      <td>TMA03 </td>
+      <td>92</td>
+      <td>34.00%</td>
+      <td>31.22</td>
+    </tr>
+  </tbody>
+</table>
 <h2 class="style1" id="result">Your predicted scores and result</h2> 
 
 
@@ -177,7 +144,6 @@ here, and we will use it to predict your result.  Your module materials will tel
     </tr>
   </tbody>
 </table>
-
 <p>Factors we have not taken into account which may affect your actual result:</p>
 <ul>
   <li>Any minumum score threshold requirements within OES</li>
