@@ -46,11 +46,11 @@ $(document).ready(function(){
 	})
 
 	
-	$("div.collapsed .box-qual-inner").hide();
+	$("div.collapsed .box-expand-collapse-inner").hide();
 	$("a.show-hide").click(function(){
 		$(this).toggleClass("plus minus");
 		$(this).parent().parent().toggleClass("collapsed");
-		$(this).parent().next(".box-qual-inner").slideToggle("fast");
+		$(this).parent().next(".box-expand-collapse-inner").slideToggle("fast");
 	return false;
 	})
 	
@@ -128,12 +128,12 @@ $(document).ready(function(){
 
 
 
-<div class="box-qual">
+<div class="box-expand-collapse">
 
 <h2>Bachelor of Engineering (Honours) <a href="#" class="show-hide minus">Expand/collapse</a> </h2>
 
 
-<div class="box-qual-inner">
+<div class="box-expand-collapse-inner">
 
 <ul class="list-style1">
   <li><strong>Code</strong>: Q65</li>
@@ -275,17 +275,17 @@ $(document).ready(function(){
 </dd>
 </dl>
 
-</div> <!-- end box-qual-inner -->
-</div> <!-- end box-qual -->
+</div> <!-- end box-expand-collapse-inner -->
+</div> <!-- end box-expand-collapse -->
 
 
 <p><em>{If another qual}</em></p>
 
-<div class="box-qual collapsed">
+<div class="box-expand-collapse collapsed">
 
     <h2>Certificate in Humanities <a href="#" class="show-hide plus">Expand/collapse</a></h2>
     
-    <div class="box-qual-inner">
+    <div class="box-expand-collapse-inner">
     <ul class="list-style1">
       <li><strong>Code</strong>: C36</li>
       <li><strong>Status</strong>: complete</li>

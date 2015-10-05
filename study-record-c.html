@@ -50,7 +50,7 @@ $(document).ready(function(){
 	$("a.show-hide").click(function(){
 		$(this).toggleClass("plus minus");
 		$(this).parent().parent().toggleClass("collapsed");
-		$(this).parent().next(".box-qual-inner").slideToggle("fast");
+		$(this).parent().next(".box-expand-collapse-inner").slideToggle("fast");
 	return false;
 	})
 	
@@ -128,12 +128,12 @@ $(document).ready(function(){
 -->
 
 
-<div class="box-qual">
+<div class="box-expand-collapse">
 
 <h2>BA (Honours) Combined Social Sciences <a href="#" class="show-hide minus">Expand/collapse</a> </h2>
 
 
-<div class="box-qual-inner">
+<div class="box-expand-collapse-inner">
 
 <ul class="qual-details">
   <li><strong>Code</strong>: Q69</li>
@@ -211,14 +211,14 @@ $(document).ready(function(){
 </dd>
 </dl>
 
-</div> <!-- end box-qual-inner -->
-</div> <!-- end box-qual -->
+</div> <!-- end box-expand-collapse-inner -->
+</div> <!-- end box-expand-collapse -->
 
 
 
 <!--
 
-<div class="box-qual collapsed">
+<div class="box-expand-collapse collapsed">
 
 <h2>Bachelor of Science (Honours) <a href="#" class="show-hide plus">Expand/collapse</a></h2>
 
@@ -226,11 +226,11 @@ $(document).ready(function(){
 
 
 
-<div class="box-qual">
+<div class="box-expand-collapse">
 
 <h2>Other modules <a href="#" class="show-hide minus">Expand/collapse</a></h2>
 
-<div class="box-qual-inner">
+<div class="box-expand-collapse-inner">
 
 <h3>Completed modules</h3>
 
@@ -250,7 +250,7 @@ $(document).ready(function(){
 </table>
 
 </div> 
-</div> <!-- end box-qual -->
+</div> <!-- end box-expand-collapse -->
 
 
 <p><a href="profile.html">Back to Profile</a></p>
