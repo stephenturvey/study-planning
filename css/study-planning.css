@@ -37,13 +37,6 @@ form.edit-appearance table tr:nth-of-type(even) td {background-color:transparent
 
 form.edit-appearance table tr {border:none;}
 
-form.edit-appearance table tr label {
-	font-weight:bold;
-	display:inline-block;
-	margin-bottom:4px;
-}
-
-
 table.qual-progress tr td {
 	text-align:center;
 	color:#888;
@@ -381,7 +374,14 @@ input[type=submit] {
 
 input[type=submit]:hover {border:1px solid #555;}
 
-form.edit-appearance textarea {width:80%;}
+form.edit-appearance textarea {width:85%;}
+
+form.edit-appearance label {
+	font-weight:bold;
+	display:inline-block;
+	margin-bottom:4px;
+}
+
 
 input:read-only, 
 textarea:read-only,
@@ -396,6 +396,50 @@ textarea:read-only,
 select {font-size:1.3em;}
 
 /**/
+
+
+/* edit online appearance */
+
+.items-wrap {
+	 display: table; 
+	 width:100%;
+	 margin:0 0 25px 0;
+}
+
+.items-row {
+	 display: table-row;
+}
+
+.items-item {
+	 display: table-cell;
+	 vertical-align:top;
+}
+
+.items-item label {
+	display:inline-block; 
+	margin:12px 0 3px 0;
+}
+
+.items-item select {width:200px;}
+
+p.update-success {
+	background:#DDECD8;
+	background-image:url(../img/icon-tick.png);
+	background-position: 12px 10px;
+	background-repeat: no-repeat  ;
+	padding:7px 15px 7px 30px;
+	border-radius:4px;
+}
+
+p.update-error {
+	background:#eee;
+	color:red;
+	padding:7px 15px;
+	border-radius:4px;
+}
+
+/**/
+
 
 /* misc */
 
@@ -513,7 +557,11 @@ body.sh-home .r3 .box {margin:0 0 20px 0;}
 
 /* media queries */
 
+
 @media screen and (max-width: 800px) {
+
+.items-item {display: block;}
+
 
 /* make tables scrollable at smaller screen sizes */
 

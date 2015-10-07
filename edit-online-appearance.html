@@ -37,6 +37,7 @@
 
 $(document).ready(function(){
 	
+	// expand & collapse boxes
 	$("div.collapsed .box-expand-collapse-inner").hide();
 	$("a.show-hide").click(function(){
 		$(this).toggleClass("plus minus");
@@ -45,8 +46,12 @@ $(document).ready(function(){
 	return false;
 	})
 	
+	// expand all link
 	$("a.expand-all").click(function(){
 		$(".box-expand-collapse-inner").show();
+		$("a.show-hide.plus").removeClass("plus").addClass("minus");
+		$(".box-expand-collapse.collapsed").removeClass("collapsed");
+	return false;
 	})
 	
 });
@@ -117,112 +122,137 @@ $(document).ready(function(){
 
 <form class="edit-appearance">
 
+
 <div class="box-expand-collapse">
 
-    <h2>General <a href="#" class="show-hide plus">Expand/collapse</a></h2>
+    <h2>General <a href="#" class="show-hide minus">Expand/collapse</a></h2>
     
-    <div class="box-expand-collapse-inner">
-    
-    <table class="two-cols">
-    
-    <tr>
-      <td><label for="id_firstname">First name</label><br>
-      
-        <input maxlength="100" size="30" name="firstname" type="text" value="Guy" id="id_firstname" readonly></td>
-    	<td><label for="id_lastname2">Surname</label><br>
-    	
-          <input maxlength="100" size="30" name="lastname" type="text" value="Carberry" id="id_lastname2" readonly></td>
-    </tr>
-    <tr>
-      <td><label for="id_email2">Email address</label><br>
-      
-        <input maxlength="100" size="30" name="email" type="text" value="guy.carberry@open.ac.uk" id="id_email2" readonly></td>
-      <td><label for="id_city2">City/town</label> <br>
-      
-        <input maxlength="120" size="21" name="city" type="text" value="" id="id_city2"></td>
-    </tr>
-    <tr>
-      <td><label for="id_country">Select a country </label>
-        <br>
-        United Kingdom</td>
-      <td><label for="id_timezone">Timezone </label>
-        <br>
-    <select name="timezone" id="id_timezone">
-      <option value="-13.0">UTC-13</option>
-  <option value="-12.5">UTC-12.5</option>
-  <option value="-12.0">UTC-12</option>
-  <option value="-11.5">UTC-11.5</option>
-  <option value="-11.0">UTC-11</option>
-  <option value="-10.5">UTC-10.5</option>
-  <option value="-10.0">UTC-10</option>
-  <option value="-9.5">UTC-9.5</option>
-  <option value="-9.0">UTC-9</option>
-  <option value="-8.5">UTC-8.5</option>
-  <option value="-8.0">UTC-8</option>
-  <option value="-7.5">UTC-7.5</option>
-  <option value="-7.0">UTC-7</option>
-  <option value="-6.5">UTC-6.5</option>
-  <option value="-6.0">UTC-6</option>
-  <option value="-5.5">UTC-5.5</option>
-  <option value="-5.0">UTC-5</option>
-  <option value="-4.5">UTC-4.5</option>
-  <option value="-4.0">UTC-4</option>
-  <option value="-3.5">UTC-3.5</option>
-  <option value="-3.0">UTC-3</option>
-  <option value="-2.5">UTC-2.5</option>
-  <option value="-2.0">UTC-2</option>
-  <option value="-1.5">UTC-1.5</option>
-  <option value="-1.0">UTC-1</option>
-  <option value="-0.5">UTC-0.5</option>
-  <option value="0.0">UTC</option>
-  <option value="0.5">UTC+0.5</option>
-  <option value="1.0">UTC+1</option>
-  <option value="1.5">UTC+1.5</option>
-  <option value="2.0">UTC+2</option>
-  <option value="2.5">UTC+2.5</option>
-  <option value="3.0">UTC+3</option>
-  <option value="3.5">UTC+3.5</option>
-  <option value="4.0">UTC+4</option>
-  <option value="4.5">UTC+4.5</option>
-  <option value="5.0">UTC+5</option>
-  <option value="5.5">UTC+5.5</option>
-  <option value="6.0">UTC+6</option>
-  <option value="6.5">UTC+6.5</option>
-  <option value="7.0">UTC+7</option>
-  <option value="7.5">UTC+7.5</option>
-  <option value="8.0">UTC+8</option>
-  <option value="8.5">UTC+8.5</option>
-  <option value="9.0">UTC+9</option>
-  <option value="9.5">UTC+9.5</option>
-  <option value="10.0">UTC+10</option>
-  <option value="10.5">UTC+10.5</option>
-  <option value="11.0">UTC+11</option>
-  <option value="11.5">UTC+11.5</option>
-  <option value="12.0">UTC+12</option>
-  <option value="12.5">UTC+12.5</option>
-  <option value="13.0">UTC+13</option>
-  <option value="99" selected="selected">Server's local time</option>
-</select>
-</td>
-    </tr>
-    <tr>
-      <td><label for="id_description_editor2">Description <a href="https://learn2.open.ac.uk/help.php?component=moodle&amp;identifier=userdescription&amp;lang=en" title="Help with Description" aria-haspopup="true" target="_blank"><img src="img/info.png" class="inline-img" alt="Help for Assignment Number"></a></label>
-        <br>
-        <textarea id="id_description_editor2" name="description_editor[text]" rows="5" spellcheck="true">Lead User Experience Designer, TutorHome redevelopment project.</textarea></td>
-      <td><label class="accesshide" for="menudescription_editorformat2">Format</label><br>
-        <select id="menudescription_editorformat2" class="select menudescription_editorformat" name="description_editor[format]">
-          <option value="1">HTML format</option>
-          <option selected="selected" value="0">Moodle auto-format</option>
-          <option value="2">Plain text format</option>
-          <option value="4">Markdown format</option>
-        </select></td>
-    </tr>
-    
-    </table>
-    <p><a href="#update-btn">Jump down to Update profile</a></p>
-    </div>
+    <div class="box-expand-collapse-inner">    
 
-</div>
+            <div class="items-wrap">
+            
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_firstname">First name</label><br><input maxlength="100" name="firstname" type="text" value="Guy" id="id_firstname" readonly>
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_lastname2">Surname</label><br><input maxlength="100" name="lastname" type="text" value="Carberry" id="id_lastname2" readonly>
+                    </div>
+                    
+                </div> <!-- end items-row -->
+                
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_email2">Email address</label><br><input maxlength="100" name="email" type="text" value="guy.carberry@open.ac.uk" id="id_email2" readonly>
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_city2">City/town</label><br><input maxlength="120" name="city" type="text" value="" id="id_city2">
+                    </div>
+                    
+                </div> <!-- end items-row -->
+            
+                <div class="items-row">
+                
+                    <div class="items-item">
+						<label for="id_country">Select a country </label><br>United Kingdom
+                    </div>
+                    
+                    <div class="items-item">
+					<label for="id_timezone">Timezone </label>
+                            <br>
+                        <select name="timezone" id="id_timezone">
+                          <option value="-13.0">UTC-13</option>
+                      <option value="-12.5">UTC-12.5</option>
+                      <option value="-12.0">UTC-12</option>
+                      <option value="-11.5">UTC-11.5</option>
+                      <option value="-11.0">UTC-11</option>
+                      <option value="-10.5">UTC-10.5</option>
+                      <option value="-10.0">UTC-10</option>
+                      <option value="-9.5">UTC-9.5</option>
+                      <option value="-9.0">UTC-9</option>
+                      <option value="-8.5">UTC-8.5</option>
+                      <option value="-8.0">UTC-8</option>
+                      <option value="-7.5">UTC-7.5</option>
+                      <option value="-7.0">UTC-7</option>
+                      <option value="-6.5">UTC-6.5</option>
+                      <option value="-6.0">UTC-6</option>
+                      <option value="-5.5">UTC-5.5</option>
+                      <option value="-5.0">UTC-5</option>
+                      <option value="-4.5">UTC-4.5</option>
+                      <option value="-4.0">UTC-4</option>
+                      <option value="-3.5">UTC-3.5</option>
+                      <option value="-3.0">UTC-3</option>
+                      <option value="-2.5">UTC-2.5</option>
+                      <option value="-2.0">UTC-2</option>
+                      <option value="-1.5">UTC-1.5</option>
+                      <option value="-1.0">UTC-1</option>
+                      <option value="-0.5">UTC-0.5</option>
+                      <option value="0.0">UTC</option>
+                      <option value="0.5">UTC+0.5</option>
+                      <option value="1.0">UTC+1</option>
+                      <option value="1.5">UTC+1.5</option>
+                      <option value="2.0">UTC+2</option>
+                      <option value="2.5">UTC+2.5</option>
+                      <option value="3.0">UTC+3</option>
+                      <option value="3.5">UTC+3.5</option>
+                      <option value="4.0">UTC+4</option>
+                      <option value="4.5">UTC+4.5</option>
+                      <option value="5.0">UTC+5</option>
+                      <option value="5.5">UTC+5.5</option>
+                      <option value="6.0">UTC+6</option>
+                      <option value="6.5">UTC+6.5</option>
+                      <option value="7.0">UTC+7</option>
+                      <option value="7.5">UTC+7.5</option>
+                      <option value="8.0">UTC+8</option>
+                      <option value="8.5">UTC+8.5</option>
+                      <option value="9.0">UTC+9</option>
+                      <option value="9.5">UTC+9.5</option>
+                      <option value="10.0">UTC+10</option>
+                      <option value="10.5">UTC+10.5</option>
+                      <option value="11.0">UTC+11</option>
+                      <option value="11.5">UTC+11.5</option>
+                      <option value="12.0">UTC+12</option>
+                      <option value="12.5">UTC+12.5</option>
+                      <option value="13.0">UTC+13</option>
+                      <option value="99" selected="selected">Server's local time</option>
+                    </select>
+                    </div>
+                    
+                </div> <!-- end items-row -->
+            
+                <div class="items-row">
+                
+                    <div class="items-item">
+						<label for="id_description_editor2">Description <a href="https://learn2.open.ac.uk/help.php?component=moodle&amp;identifier=userdescription&amp;lang=en" title="Help with Description" aria-haspopup="true" target="_blank"><img src="img/info.png" class="inline-img" alt="Help for description"></a></label><br>
+        				<textarea id="id_description_editor2" name="description_editor[text]" rows="5" spellcheck="true">Lead User Experience Designer, TutorHome redevelopment project.</textarea>
+                    </div>
+                    
+                    <div class="items-item">
+						<label class="accesshide" for="menudescription_editorformat2">Format</label><br>
+                        <select id="menudescription_editorformat2" class="select menudescription_editorformat" name="description_editor[format]">
+                          <option value="1">HTML format</option>
+                          <option selected="selected" value="0">Moodle auto-format</option>
+                          <option value="2">Plain text format</option>
+                          <option value="4">Markdown format</option>
+                        </select>
+                    </div>
+                    
+                </div> <!-- end items-row -->
+            
+        	</div> <!-- end items-wrap -->
+
+    
+    <p><input name="submitbutton" value="Update" type="submit" id="update-btn"></p>
+
+</div> <!-- end box-expand-collapse-inner -->
+
+</div> <!-- end box-expand-collapse -->
+
+
 
 <div class="box-expand-collapse collapsed">
 
@@ -230,23 +260,123 @@ $(document).ready(function(){
     
     <div class="box-expand-collapse-inner">
     
-    <p>There would be more information here.</p>
+    <p><em>{if update success}</em></p>
     
-	</div>
+       		<p class="update-success">Update successful <!-- this mesg should disappear after a couple of secs --></p>
 
-</div>
+    
+            <div class="items-wrap">
+            
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_maildisplay">Email display </label><br>
+        
+        <select name="maildisplay" id="id_maildisplay">
+        <option value="0">Hide my email address from everyone</option>
+        <option value="1" selected="selected">Allow everyone to see my email address</option>
+        <option value="2">Allow only other module members to see my email address</option>
+        </select>
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_mailformat">Email format </label><br>
+        
+        <select name="mailformat" id="id_mailformat">
+        <option value="0" selected="selected">Plain text format</option>
+        <option value="1">Pretty HTML format</option>
+        </select>
+                    </div>
+                    
+                </div> <!-- end items-row -->
+                
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_maildigest">Email digest type </label> <a href="https://learn2.open.ac.uk/help.php?component=moodle&amp;identifier=emaildigest&amp;lang=en" title="Help with Email digest type" aria-haspopup="true" target="_blank"><img src="img/info.png" class="inline-img" alt="Help with email digest type"></a>
+        <br>
+        <select name="maildigest" id="id_maildigest">
+        <option value="0" selected="selected">No digest (single email per forum post)</option>
+        <option value="1">Complete (daily email with full posts)</option>
+        <option value="2">Complete (daily email with full posts)</option>
+        </select>
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_autosubscribe">Forum auto-subscribe </label><br>
+        
+        <select name="autosubscribe" id="id_autosubscribe">
+        <option value="1" selected="selected">Yes: when I post, subscribe me to that forum discussion</option>
+        <option value="0">No: don't automatically subscribe me to forum discussions</option>
+        </select>
+                    </div>
+                    
+                </div> <!-- end items-row -->
+            
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_preference_htmleditor">Text editor </label><br>
+        
+        <select name="preference_htmleditor" id="id_preference_htmleditor">
+        <option value="" selected="selected">Default editor (Atto)</option>
+        <option value="atto">Atto HTML editor</option>
+        <option value="tinymce">TinyMCE HTML editor</option>
+        <option value="textarea">Plain text area</option>
+        </select>
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_lang">Preferred language </label><br>
+                    </div>
+                    
+                </div> <!-- end items-row -->
+                
+        	</div> <!-- end items-wrap -->
+    
+    <p><input name="submitbutton" value="Update" type="submit" id="update-btn"></p>
+
+</div> <!-- end box-expand-collapse-inner -->
+
+</div> <!-- end box-expand-collapse -->
+
+
+
 
 <div class="box-expand-collapse collapsed">
 
     <h2>User picture <a href="#" class="show-hide plus">Expand/collapse</a></h2>
-    
+
     <div class="box-expand-collapse-inner">
     
-    <p>There would be more information here.</p>
+	<p><em>{if update error}</em></p>
     
-	</div>
+	<p class="update-error"><strong>Error</strong>: the maximum file size (2MB) has been exceeded. Please try again.</p>
+    
+            <div class="items-wrap">
+            
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <img src="img/profile-pic.jpg" alt="Profile picture">
+                    </div>
+                    
+                    <div class="items-item">
+                        <label for="file-upload">Change picture</label><br>
+                        <input name="file-upload" id="file-upload" type="file">
+                    </div>
+                    
+                </div> <!-- end items-row -->
+                            
+        	</div> <!-- end items-wrap -->
+    
+    <p><input name="submitbutton" value="Update" type="submit" id="update-btn"></p>
 
-</div>
+</div> <!-- end box-expand-collapse-inner -->
+
+</div> <!-- end box-expand-collapse -->
+
+
 
 <div class="box-expand-collapse collapsed">
 
@@ -254,11 +384,46 @@ $(document).ready(function(){
     
     <div class="box-expand-collapse-inner">
     
-    <p>There would be more information here.</p>
+            <div class="items-wrap">
+            
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_firstnamephonetic">First name - phonetic </label>
+        <br>
+        <input maxlength="100" name="firstnamephonetic" type="text" id="id_firstnamephonetic">
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_lastnamephonetic">Surname - phonetic </label><br>
+        <input maxlength="100" name="lastnamephonetic" type="text" id="id_lastnamephonetic">
+                    </div>
+                    
+                </div> <!-- end items-row -->
+                
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_middlename">Middle name </label><br>
+        <input maxlength="100" name="middlename" type="text" id="id_middlename">
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_alternatename">Alternate name </label><br>
+        <input maxlength="100" name="alternatename" type="text" id="id_alternatename">
+                    </div>
+                    
+                </div> <!-- end items-row -->
+            
+        	</div> <!-- end items-wrap -->
     
-	</div>
+    <p><input name="submitbutton" value="Update" type="submit" id="update-btn"></p>
 
-</div>
+</div> <!-- end box-expand-collapse-inner -->
+
+</div> <!-- end box-expand-collapse -->
+
+
 
 <div class="box-expand-collapse collapsed">
 
@@ -266,11 +431,19 @@ $(document).ready(function(){
     
     <div class="box-expand-collapse-inner">
     
-    <p>There would be more information here.</p>
+        <label for="id_interests_othertags">List of interests </label> <a href="https://learn2.open.ac.uk/help.php?component=moodle&amp;identifier=interestslist&amp;lang=en" title="Help with List of interests" aria-haspopup="true" target="_blank"><img src="img/info.png" class="inline-img" alt="Help with List of interests"></a>
+        
+        <p class="note">Enter tags separated by commas</p>
+        
+        <p><textarea rows="5" name="interests[othertags]" id="id_interests_othertags"></textarea></p>
     
-	</div>
+    	<p><input name="submitbutton" value="Update" type="submit" id="update-btn"></p>
+        
+	</div> <!-- end box-expand-collapse-inner -->
 
-</div>
+</div> <!-- end box-expand-collapse -->
+
+
 
 <div class="box-expand-collapse collapsed">
 
@@ -278,11 +451,100 @@ $(document).ready(function(){
     
     <div class="box-expand-collapse-inner">
     
-    <p>There would be more information here.</p>
+            <div class="items-wrap">
+            
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_url">Web page </label><br>
+        <input maxlength="255" name="url" type="text" value="" id="id_url">
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_icq">ICQ number </label><br>
+        <input maxlength="15" name="icq" type="text" value="" id="id_icq">
+                    </div>
+                    
+                </div> <!-- end items-row -->
+                
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_skype">Skype ID </label><br>
+        <input maxlength="50" name="skype" type="text" value="" id="id_skype">
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_aim">AIM ID </label><br>
+        <input maxlength="50" name="aim" type="text" value="" id="id_aim">
+                    </div>
+                    
+                </div> <!-- end items-row -->
+            
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_yahoo">Yahoo ID </label><br>
+        <input maxlength="50" name="yahoo" type="text" value="" id="id_yahoo">
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_msn">MSN ID </label><br>
+        <input maxlength="50" name="msn" type="text" value="" id="id_msn">
+                    </div>
+                    
+                </div> <!-- end items-row -->
+                
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_idnumber">Personal Identifier </label><br>
+        <input maxlength="255" name="idnumber" type="text" value="0123456" id="id_idnumber" readonly>
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_institution">Institution </label><br>
+        <input maxlength="255" name="institution" type="text" value="" id="id_institution" readonly>
+                    </div>
+                    
+                </div> <!-- end items-row -->
+                
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_department">Department </label><br>
+        <input maxlength="255" name="department" type="text" value="" id="id_department" readonly>
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_phone1">Phone </label><br>
+        <input maxlength="20" name="phone1" type="text" value="" id="id_phone1">
+                    </div>
+                    
+                </div> <!-- end items-row -->
+                
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_phone2">Mobile phone </label><br>
+        <input maxlength="20" name="phone2" type="text" value="" id="id_phone2" readonly>
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_address">Address </label><br>
+        <input maxlength="255" name="address" type="text" value="" id="id_address" readonly>
+                    </div>
+                    
+                </div> <!-- end items-row -->
+        	</div> <!-- end items-wrap -->
     
-	</div>
+    <p><input name="submitbutton" value="Update" type="submit" id="update-btn"></p>
 
-</div>
+</div> <!-- end box-expand-collapse-inner -->
+
+</div> <!-- end box-expand-collapse -->
+
+
 
 <div class="box-expand-collapse collapsed">
 
@@ -290,11 +552,34 @@ $(document).ready(function(){
     
     <div class="box-expand-collapse-inner">
     
-    <p>There would be more information here.</p>
-    
-	</div>
+            <div class="items-wrap">
+            
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_profile_field_profilevisibility">Profile visibility </label><br>
+        <select name="profile_field_profilevisibility" id="id_profile_field_profilevisibility">
+  <option value="0">Allow only other course members to see my profile</option>
+  <option value="1">Hide my profile from everyone</option>
+  <option value="2" selected="selected">Allow everyone to see my profile</option>
+</select>
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_profile_field_twitterid">Twitter Id </label><br>
+        <input maxlength="2048" name="profile_field_twitterid" type="text" value="" id="id_profile_field_twitterid">
+                    </div>
+                    
+                </div> <!-- end items-row -->
 
-</div>
+        	</div> <!-- end items-wrap -->
+    
+    <p><input name="submitbutton" value="Update" type="submit" id="update-btn"></p>
+
+</div> <!-- end box-expand-collapse-inner -->
+
+</div> <!-- end box-expand-collapse -->
+
 
 <div class="box-expand-collapse collapsed">
 
@@ -302,170 +587,53 @@ $(document).ready(function(){
     
     <div class="box-expand-collapse-inner">
     
-    <p>There would be more information here.</p>
+            <div class="items-wrap">
+            
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_profile_field_sn_facebook">Facebook</label> <a href="https://learn2.open.ac.uk/help.php?component=profilefield_socialnetworks&amp;identifier=facebook&amp;lang=en" title="Help with Facebook" aria-haspopup="true" target="_blank"><img src="img/info.png" class="inline-img" alt="Help with Facebook"></a><br>
+        <input name="profile_field_sn_facebook" type="text" id="id_profile_field_sn_facebook">
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_profile_field_sn_twitter">Twitter</label> <a href="https://learn2.open.ac.uk/help.php?component=profilefield_socialnetworks&amp;identifier=twitter&amp;lang=en" title="Help with Twitter" aria-haspopup="true" target="_blank"><img src="img/info.png" class="inline-img" alt="Help with Twitter"></a><br>
+        <input name="profile_field_sn_twitter" type="text" id="id_profile_field_sn_twitter">
+                    </div>
+                    
+                </div> <!-- end items-row -->
+                
+                <div class="items-row">
+                
+                    <div class="items-item">
+                      <label for="id_profile_field_sn_linkedin">LinkedIn</label> <a href="https://learn2.open.ac.uk/help.php?component=profilefield_socialnetworks&amp;identifier=linkedin&amp;lang=en" title="Help with LinkedIn" aria-haspopup="true" target="_blank"><img src="img/info.png" class="inline-img" alt="Help with LinkedIn"></a><br>
+        <input name="profile_field_sn_linkedin" type="text" id="id_profile_field_sn_linkedin">
+                    </div>
+                    
+                    <div class="items-item">
+                      <label for="id_profile_field_sn_googleplus">Google+</label> <a href="https://learn2.open.ac.uk/help.php?component=profilefield_socialnetworks&amp;identifier=googleplus&amp;lang=en" title="Help with Google+" aria-haspopup="true" target="_blank"><img src="img/info.png" class="inline-img" alt="Help with Google+"></a><br>
+        <input name="profile_field_sn_googleplus" type="text" id="id_profile_field_sn_googleplus">
+                    </div>
+                    
+                </div> <!-- end items-row -->
+            
+        	</div> <!-- end items-wrap -->
     
-	</div>
+    <p><input name="submitbutton" value="Update" type="submit" id="update-btn"></p>
 
-</div>
+</div> <!-- end box-expand-collapse-inner -->
 
+</div> <!-- end box-expand-collapse -->
+
+
+
+</form>
 
 <hr>
 
-
-  <div class="collapsible-actions"><a href="#" class="collapseexpand" role="button" aria-controls="yui_3_17_2_2_1443694999622_131 yui_3_17_2_2_1443694999622_138 yui_3_17_2_2_1443694999622_142 yui_3_17_2_2_1443694999622_146 yui_3_17_2_2_1443694999622_150 yui_3_17_2_2_1443694999622_154 yui_3_17_2_2_1443694999622_158 yui_3_17_2_2_1443694999622_162">Expand all</a></div>
-
-
-  <fieldset class="clearfix collapsible" id="id_moodle_userpreferences">
-    <legend class="ftoggler" id="yui_3_17_2_2_1443694999622_430"><a href="#" class="fheader" role="button" aria-controls="id_moodle_userpreferences" aria-expanded="true" id="yui_3_17_2_2_1443694999622_138">Preferences</a></legend>
-    <div class="fcontainer clearfix">
-    
-    <div id="fitem_id_maildisplay" class="fitem fitem_fselect "><div class="fitemtitle"><label for="id_maildisplay">Email display </label></div><div class="felement fselect"><select name="maildisplay" id="id_maildisplay">
-  <option value="0">Hide my email address from everyone</option>
-  <option value="1" selected="selected">Allow everyone to see my email address</option>
-  <option value="2">Allow only other module members to see my email address</option>
-</select></div></div>
-    <div id="fitem_id_mailformat" class="fitem fitem_fselect "><div class="fitemtitle"><label for="id_mailformat">Email format </label></div><div class="felement fselect"><select name="mailformat" id="id_mailformat">
-  <option value="0" selected="selected">Plain text format</option>
-  <option value="1">Pretty HTML format</option>
-</select></div></div>
-    <div id="fitem_id_maildigest" class="fitem fitem_fselect "><div class="fitemtitle"><label for="id_maildigest">Email digest type </label><span class="helptooltip"><a href="https://learn2.open.ac.uk/help.php?component=moodle&amp;identifier=emaildigest&amp;lang=en" title="Help with Email digest type" aria-haspopup="true" target="_blank"><img src="https://learn2.open.ac.uk/theme/image.php/ou/core/1441179433/help" alt="Help with Email digest type" class="iconhelp"></a></span></div><div class="felement fselect"><select name="maildigest" id="id_maildigest">
-  <option value="0" selected="selected">No digest (single email per forum post)</option>
-  <option value="1">Complete (daily email with full posts)</option>
-  <option value="2">Complete (daily email with full posts)</option>
-</select></div></div>
-    <div id="fitem_id_autosubscribe" class="fitem fitem_fselect "><div class="fitemtitle"><label for="id_autosubscribe">Forum auto-subscribe </label></div><div class="felement fselect"><select name="autosubscribe" id="id_autosubscribe">
-  <option value="1" selected="selected">Yes: when I post, subscribe me to that forum discussion</option>
-  <option value="0">No: don't automatically subscribe me to forum discussions</option>
-</select></div></div>
-    <div id="fitem_id_preference_htmleditor" class="fitem fitem_fselect "><div class="fitemtitle"><label for="id_preference_htmleditor">Text editor </label></div><div class="felement fselect"><select name="preference_htmleditor" id="id_preference_htmleditor">
-  <option value="" selected="selected">Default editor (Atto)</option>
-  <option value="atto">Atto HTML editor</option>
-  <option value="tinymce">TinyMCE HTML editor</option>
-  <option value="textarea">Plain text area</option>
-</select></div></div>
-    <div class="fitem "><div class="fitemtitle"><div class="fstaticlabel"><label for="id_lang">Preferred language </label></div></div><div class="felement fstatic">&nbsp;</div></div>
-    </div></fieldset>
-  <fieldset class="clearfix collapsible" id="id_moodle_picture">
-    <legend class="ftoggler" id="yui_3_17_2_2_1443694999622_434"><a href="#" class="fheader" role="button" aria-controls="id_moodle_picture" aria-expanded="true" id="yui_3_17_2_2_1443694999622_142">User picture</a></legend>
-    <div class="fcontainer clearfix">
-    
-    <div class="fitem "><div class="fitemtitle"><div class="fstaticlabel"><label>Current picture </label></div></div><div class="felement fstatic"><a href="https://learn2.open.ac.uk/user/profile.php?id=25248"><img src="https://learn2.open.ac.uk/pluginfile.php/28571/user/icon/ou/f1?rev=14964395" alt="Picture of Guy Carberry" title="Picture of Guy Carberry" class="userpicture" width="64" height="64"></a></div></div>
-    <div id="fitem_id_deletepicture" class="fitem fitem_fcheckbox "><div class="fitemtitle"><label for="id_deletepicture">Delete </label></div><div class="felement fcheckbox"><span><input name="deletepicture" type="checkbox" value="1" id="id_deletepicture"></span></div></div>
-    <div id="fitem_id_imagefile" class="fitem fitem_ffilemanager "><div class="fitemtitle"><label for="id_imagefile">New picture (updates are not immediate; new picture should show after 24 hours) </label><span class="helptooltip"><a href="https://learn2.open.ac.uk/help.php?component=moodle&amp;identifier=newpicture&amp;lang=en" title="Help with New picture (updates are not immediate; new picture should show after 24 hours)" aria-haspopup="true" target="_blank"><img src="https://learn2.open.ac.uk/theme/image.php/ou/core/1441179433/help" alt="Help with New picture (updates are not immediate; new picture should show after 24 hours)" class="iconhelp"></a></span></div><div class="felement ffilemanager">
-<div id="filemanager-560d09978387d" class="filemanager fm-loaded fm-nomkdir fm-nofiles fm-noitems">
-    <div class="fp-restrictions">
-        <span>Maximum size for new files: 110MB, maximum attachments: 1</span>
-        <span class="dnduploadnotsupported-message"> - drag and drop not supported<span class="helptooltip"><a href="https://learn2.open.ac.uk/help.php?component=moodle&amp;identifier=dndnotsupported&amp;lang=en" title="Help with Drag and drop upload not supported" aria-haspopup="true" target="_blank"><img src="https://learn2.open.ac.uk/theme/image.php/ou/core/1441179433/help" alt="Help with Drag and drop upload not supported" class="iconhelp"></a></span> </span>
-    </div>
-    <div class="fp-navbar">
-        <div class="filemanager-toolbar">
-            <div class="fp-toolbar">
-                <div class="fp-btn-add">
-                    <a role="button" title="Add..." href="#">
-                        <img src="https://learn2.open.ac.uk/theme/image.php/ou/core/1441179433/a/add_file" alt="Add file">
-                    </a>
-                </div>
-                <div class="fp-btn-mkdir">
-                    <a role="button" title="Create folder" href="#">
-                        <img src="https://learn2.open.ac.uk/theme/image.php/ou/core/1441179433/a/create_folder" alt="Create folder">
-                    </a>
-                </div>
-                <div class="fp-btn-download">
-                    <a role="button" title="Download all" href="#">
-                        <img src="https://learn2.open.ac.uk/theme/image.php/ou/core/1441179433/a/download_all" alt="Download all files">
-                    </a>
-                </div>
-                <img class="fp-img-downloading" src="https://learn2.open.ac.uk/theme/image.php/ou/core/1441179433/i/loading_small" alt="">
-            </div>
-            <div class="fp-viewbar">
-                <a title="Display folder with file icons" class="fp-vb-icons checked" href="#">
-                    <img alt="Display as file icons" src="https://learn2.open.ac.uk/theme/image.php/ou/theme/1441179433/fp/view_icon_active">
-                </a>
-                <a title="Display folder with file details" class="fp-vb-details" href="#">
-                    <img alt="Display as file details" src="https://learn2.open.ac.uk/theme/image.php/ou/theme/1441179433/fp/view_list_active">
-                </a>
-                <a title="Display folder as file tree" class="fp-vb-tree" href="#">
-                    <img alt="Display as file tree" src="https://learn2.open.ac.uk/theme/image.php/ou/theme/1441179433/fp/view_tree_active">
-                </a>
-            </div>
-        </div>
-        <div class="fp-pathbar"><span class="fp-path-folder first last odd" id="yui_3_17_2_2_1443694999622_411"><a class="fp-path-folder-name" href="#">Files</a></span></div>
-    </div>
-    <div class="filemanager-loading mdl-align"><img alt="Loading..." class="smallicon" title="Loading..." src="https://learn2.open.ac.uk/theme/image.php/ou/core/1441179433/i/loading_small"></div>
-    <div class="filemanager-container" id="yui_3_17_2_2_1443694999622_192">
-        <div class="fm-content-wrapper">
-            <div class="fp-content"></div>
-            <div class="fm-empty-container">
-                <div class="dndupload-message">You can drag and drop files here to add them.<br><div class="dndupload-arrow"></div></div>
-            </div>
-            <div class="dndupload-target">Drop files here to upload<br><div class="dndupload-arrow"></div></div>
-            <div class="dndupload-progressbars"></div>
-            <div class="dndupload-uploadinprogress"><img alt="Loading..." class="smallicon" title="Loading..." src="https://learn2.open.ac.uk/theme/image.php/ou/core/1441179433/i/loading_small"></div>
-        </div>
-        <div class="filemanager-updating"><img alt="Loading..." class="smallicon" title="Loading..." src="https://learn2.open.ac.uk/theme/image.php/ou/core/1441179433/i/loading_small"></div>
-    </div>
-</div><noscript>&lt;div&gt;&lt;object type='text/html' data='https://learn2.open.ac.uk/repository/draftfiles_manager.php?env=filemanager&amp;amp;action=browse&amp;amp;itemid=41183796&amp;amp;subdirs=0&amp;amp;maxbytes=115343360&amp;amp;areamaxbytes=-1&amp;amp;maxfiles=1&amp;amp;ctx_id=28571&amp;amp;course=1&amp;amp;sesskey=uGHJgDs4Ah' height='160' width='600' style='border:1px solid #000'&gt;&lt;/object&gt;&lt;/div&gt;</noscript><input value="41183796" name="imagefile" type="hidden"><input value="" id="id_imagefile" type="hidden"></div></div>
-    <div id="fitem_id_imagealt" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_imagealt">Picture description </label></div><div class="felement ftext"><input maxlength="100" size="30" name="imagealt" type="text" value="" id="id_imagealt"></div></div>
-    </div></fieldset>
-  <fieldset class="clearfix collapsible collapsed" id="id_moodle_additional_names">
-    <legend class="ftoggler"><a href="#" class="fheader" role="button" aria-controls="id_moodle_additional_names" aria-expanded="false" id="yui_3_17_2_2_1443694999622_146">Additional names</a></legend>
-    <div class="fcontainer clearfix">
-    
-    <div id="fitem_id_firstnamephonetic" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_firstnamephonetic">First name - phonetic </label></div><div class="felement ftext"><input maxlength="100" size="30" name="firstnamephonetic" type="text" id="id_firstnamephonetic"></div></div>
-    <div id="fitem_id_lastnamephonetic" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_lastnamephonetic">Surname - phonetic </label></div><div class="felement ftext"><input maxlength="100" size="30" name="lastnamephonetic" type="text" id="id_lastnamephonetic"></div></div>
-    <div id="fitem_id_middlename" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_middlename">Middle name </label></div><div class="felement ftext"><input maxlength="100" size="30" name="middlename" type="text" id="id_middlename"></div></div>
-    <div id="fitem_id_alternatename" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_alternatename">Alternate name </label></div><div class="felement ftext"><input maxlength="100" size="30" name="alternatename" type="text" id="id_alternatename"></div></div>
-    </div></fieldset>
-  <fieldset class="clearfix collapsible" id="id_moodle_interests">
-    <legend class="ftoggler" id="yui_3_17_2_2_1443694999622_438"><a href="#" class="fheader" role="button" aria-controls="id_moodle_interests" aria-expanded="true" id="yui_3_17_2_2_1443694999622_150">Interests</a></legend>
-    <div class="fcontainer clearfix">
-    
-    <div id="fitem_id_interests" class="fitem fitem_ftags "><div class="fitemtitle"><div class="fgrouplabel"><label>List of interests </label><span class="helptooltip"><a href="https://learn2.open.ac.uk/help.php?component=moodle&amp;identifier=interestslist&amp;lang=en" title="Help with List of interests" aria-haspopup="true" target="_blank"><img src="https://learn2.open.ac.uk/theme/image.php/ou/core/1441179433/help" alt="Help with List of interests" class="iconhelp"></a></span></div></div><fieldset class="felement ftags"><label class="accesshide" for="id_interests_othertags">Enter tags separated by commas</label><textarea cols="40" rows="5" name="interests[othertags]" id="id_interests_othertags"></textarea></fieldset></div>
-    </div></fieldset>
-  <fieldset class="clearfix collapsible" id="id_moodle_optional">
-    <legend class="ftoggler" id="yui_3_17_2_2_1443694999622_442"><a href="#" class="fheader" role="button" aria-controls="id_moodle_optional" aria-expanded="true" id="yui_3_17_2_2_1443694999622_154">Optional</a></legend>
-    <div class="fcontainer clearfix">
-    
-    <div id="fitem_id_url" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_url">Web page </label></div><div class="felement ftext"><input maxlength="255" size="50" name="url" type="text" value="" id="id_url"></div></div>
-    <div id="fitem_id_icq" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_icq">ICQ number </label></div><div class="felement ftext"><input maxlength="15" size="25" name="icq" type="text" value="" id="id_icq"></div></div>
-    <div id="fitem_id_skype" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_skype">Skype ID </label></div><div class="felement ftext"><input maxlength="50" size="25" name="skype" type="text" value="" id="id_skype"></div></div>
-    <div id="fitem_id_aim" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_aim">AIM ID </label></div><div class="felement ftext"><input maxlength="50" size="25" name="aim" type="text" value="" id="id_aim"></div></div>
-    <div id="fitem_id_yahoo" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_yahoo">Yahoo ID </label></div><div class="felement ftext"><input maxlength="50" size="25" name="yahoo" type="text" value="" id="id_yahoo"></div></div>
-    <div id="fitem_id_msn" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_msn">MSN ID </label></div><div class="felement ftext"><input maxlength="50" size="25" name="msn" type="text" value="" id="id_msn"></div></div>
-    <div id="fitem_id_idnumber" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_idnumber">Personal Identifier </label></div><div class="felement ftext"><input maxlength="255" size="25" name="idnumber" type="text" value="01279458" id="id_idnumber" readonly></div></div>
-    <div id="fitem_id_institution" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_institution">Institution </label></div><div class="felement ftext"><input maxlength="255" size="25" name="institution" type="text" value="" id="id_institution" readonly></div></div>
-    <div id="fitem_id_department" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_department">Department </label></div><div class="felement ftext"><input maxlength="255" size="25" name="department" type="text" value="" id="id_department" readonly></div></div>
-    <div id="fitem_id_phone1" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_phone1">Phone </label></div><div class="felement ftext"><input maxlength="20" size="25" name="phone1" type="text" value="" id="id_phone1"></div></div>
-    <div id="fitem_id_phone2" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_phone2">Mobile phone </label></div><div class="felement ftext"><input maxlength="20" size="25" name="phone2" type="text" value="" id="id_phone2" readonly></div></div>
-    <div id="fitem_id_address" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_address">Address </label></div><div class="felement ftext"><input maxlength="255" size="25" name="address" type="text" value="" id="id_address" readonly></div></div>
-    </div></fieldset>
-  <fieldset class="clearfix collapsible" id="id_category_1">
-    <legend class="ftoggler" id="yui_3_17_2_2_1443694999622_446"><a href="#" class="fheader" role="button" aria-controls="id_category_1" aria-expanded="true" id="yui_3_17_2_2_1443694999622_158">Profile visibility</a></legend>
-    <div class="fcontainer clearfix">
-    
-    <div id="fitem_id_profile_field_profilevisibility" class="fitem fitem_fselect "><div class="fitemtitle"><label for="id_profile_field_profilevisibility">Profile visibility </label></div><div class="felement fselect"><select name="profile_field_profilevisibility" id="id_profile_field_profilevisibility">
-  <option value="0">Allow only other course members to see my profile</option>
-  <option value="1">Hide my profile from everyone</option>
-  <option value="2" selected="selected">Allow everyone to see my profile</option>
-</select></div></div>
-    <div id="fitem_id_profile_field_twitterid" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_profile_field_twitterid">Twitter Id </label></div><div class="felement ftext"><input maxlength="2048" size="30" name="profile_field_twitterid" type="text" value="" id="id_profile_field_twitterid"></div></div>
-    </div></fieldset>
-  <fieldset class="clearfix collapsible" id="id_category_3">
-    <legend class="ftoggler" id="yui_3_17_2_2_1443694999622_450"><a href="#" class="fheader" role="button" aria-controls="id_category_3" aria-expanded="true" id="yui_3_17_2_2_1443694999622_162">Social networking</a></legend>
-    <div class="fcontainer clearfix">
-    
-    <div id="fitem_id_profile_field_sn_facebook" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_profile_field_sn_facebook">Facebook </label><span class="helptooltip"><a href="https://learn2.open.ac.uk/help.php?component=profilefield_socialnetworks&amp;identifier=facebook&amp;lang=en" title="Help with Facebook" aria-haspopup="true" target="_blank"><img src="https://learn2.open.ac.uk/theme/image.php/ou/core/1441179433/help" alt="Help with Facebook" class="iconhelp"></a></span></div><div class="felement ftext"><input name="profile_field_sn_facebook" type="text" id="id_profile_field_sn_facebook"></div></div>
-    <div id="fitem_id_profile_field_sn_twitter" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_profile_field_sn_twitter">Twitter </label><span class="helptooltip"><a href="https://learn2.open.ac.uk/help.php?component=profilefield_socialnetworks&amp;identifier=twitter&amp;lang=en" title="Help with Twitter" aria-haspopup="true" target="_blank"><img src="https://learn2.open.ac.uk/theme/image.php/ou/core/1441179433/help" alt="Help with Twitter" class="iconhelp"></a></span></div><div class="felement ftext"><input name="profile_field_sn_twitter" type="text" id="id_profile_field_sn_twitter"></div></div>
-    <div id="fitem_id_profile_field_sn_linkedin" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_profile_field_sn_linkedin">LinkedIn </label><span class="helptooltip"><a href="https://learn2.open.ac.uk/help.php?component=profilefield_socialnetworks&amp;identifier=linkedin&amp;lang=en" title="Help with LinkedIn" aria-haspopup="true" target="_blank"><img src="https://learn2.open.ac.uk/theme/image.php/ou/core/1441179433/help" alt="Help with LinkedIn" class="iconhelp"></a></span></div><div class="felement ftext"><input name="profile_field_sn_linkedin" type="text" id="id_profile_field_sn_linkedin"></div></div>
-    <div id="fitem_id_profile_field_sn_googleplus" class="fitem fitem_ftext "><div class="fitemtitle"><label for="id_profile_field_sn_googleplus">Google+ </label><span class="helptooltip"><a href="https://learn2.open.ac.uk/help.php?component=profilefield_socialnetworks&amp;identifier=googleplus&amp;lang=en" title="Help with Google+" aria-haspopup="true" target="_blank"><img src="https://learn2.open.ac.uk/theme/image.php/ou/core/1441179433/help" alt="Help with Google+" class="iconhelp"></a></span></div><div class="felement ftext"><input name="profile_field_sn_googleplus" type="text" id="id_profile_field_sn_googleplus"></div></div>
-    </div></fieldset>
-  <fieldset class="hidden"><div>
-    <div id="fitem_id_submitbutton" class="fitem fitem_actionbuttons fitem_fsubmit"><div class="felement fsubmit"><input name="submitbutton" value="Update profile" type="submit" id="update-btn"></div></div>
-    </div></fieldset>
-</form>
-
-
 <p><a href="profile.html">Back to Profile</a></p>
+
+
 </div>
 
 </div>
