@@ -53,13 +53,14 @@ $(document).ready(function(){
 	return false;
 	})
 	
-});
+});	
 
 // PERSONA SWITCHER ONLY -- CAN BE DELETED AFTER!
 function MM_jumpMenu(targ,selObj,restore){ //v3.0
   eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
   if (restore) selObj.selectedIndex=0;
 }
+
 
 </script>
 
@@ -122,8 +123,8 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 <!-- PERSONA SWITCHER -->
 <form style="float:right; margin:12px 10px 0 0;">
   <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
-    <option value="study-record.html" selected>Standard</option>
-    <option value="study-record-old-framework.html">Old Framework</option>
+    <option value="study-record.html">Standard</option>
+    <option value="study-record-old-framework.html" selected>Old Framework</option>
     <option value="study-record-open-degree.html">Open Degree</option>
     <option value="study-record-access.html">Access Module</option>
     <option value="study-record-resit.html">Resit</option>
@@ -134,21 +135,24 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 </form>
 <!-- END SWITCHER -->
 
-
-
 <h1 class="h1main">Study record</h1>
 
 <div class="inview">
 
 
 <div class="box-alert">
-    <h2>Enrol on modules</h2>
-    <p>You can now enrol on modules starting between 1st September 2015 and 31st August 2016.</p>
-    <p><a href="#" class="ou-btn">Choose next modules</a></p>
+
+    <h2>Transitional arrangements</h2>
+    <p>You are studying with transitional fee arrangements. These arrangements end on 31 August 2017, and any modules you start after this date will be at a higher fee level.</p>
+    <p>You should check your qualification completion date below. If you need further advice please contact your support team.</p>
+
 </div>
+
+
+
 <div class="box-expand-collapse">
-  
-  <h2>Bachelor of Engineering (Honours) <a href="#" class="show-hide minus">Expand/collapse</a> </h2>
+
+<h2>Bachelor of Engineering (Honours) <a href="#" class="show-hide minus">Expand/collapse</a> </h2>
 
 
 <div class="box-expand-collapse-inner">
@@ -172,13 +176,21 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
     <td>Stage 3</td>
   </tr>
 </table>
-<p><a href="interrupt-page.html" class="ou-btn">Choose next modules</a></p>
+
+
+<div class="box-alert2">
+
+    <h3>Qualification completion date</h3>
+    <p>The University has agreed that this qualification is to be withdrawn and the final date that any student can qualify for it is 31 December 2017. You will need to ensure that you satisfy all the academic requirements for it by that date.</p>
+    <p>If you do not think you will be able to complete your qualification by this date, see our <a href="http://www2.open.ac.uk/students/help/planning-studies/important-information">advice and information</a>.</p>
+
+</div>
+
+<p><a href="next-module.html" class="ou-btn">Choose next modules</a></p>
+
 <hr>
 
 <h3>Enrolled modules</h3>
-
-<p class="loan-text">Student Finance England (SFE) has approved a <a href="finance.html">loan for 2015/2016</a>.</p>
-
 <table>
   <tr>
     <td><a href="module-record.html">Engineering: professions, practice and skills 2 (T276)</a></td>
