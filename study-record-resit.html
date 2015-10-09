@@ -53,13 +53,14 @@ $(document).ready(function(){
 	return false;
 	})
 	
-});
+});	
 
 // PERSONA SWITCHER ONLY -- CAN BE DELETED AFTER!
 function MM_jumpMenu(targ,selObj,restore){ //v3.0
   eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
   if (restore) selObj.selectedIndex=0;
 }
+
 
 </script>
 
@@ -124,8 +125,8 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
   <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
     <option value="study-record.html">Standard</option>
     <option value="study-record-old-framework.html">Old Framework</option>
-    <option value="study-record-open-degree.html">Open Degree</option>
-    <option value="study-record-access.html" selected>Access Module</option>
+    <option value="study-record-open-degree.html" selected>Open Degree</option>
+    <option value="study-record-access.html">Access Module</option>
     <option value="study-record-resit.html">Resit</option>
     <option value="study-record-failed-cancelled.html">Failed/Cancelled</option>
     <option value="study-record-module-only.html">Module Only</option>
@@ -134,41 +135,27 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 </form>
 <!-- END SWITCHER -->
 
-
-
 <h1 class="h1main">Study record</h1>
 
 <div class="inview">
   <div class="box-expand-collapse">
-    <h2>Your current modules <a href="#" class="show-hide minus">Expand/collapse</a></h2>
-    <div class="box-expand-collapse-inner">
-      
-      <h3>Enrolled modules</h3>
-      <table>
-        <tr>
-          <td><a href="module-record.html">Arts and languages Access module (Y031)</a></td>
-        </tr>
-      </table>
-    </div>
-    <!-- end box-expand-collapse-inner -->
-  </div>
-  <div class="box-expand-collapse">
     
-    <h2>BA (Honours) <a href="#" class="show-hide minus">Expand/collapse</a> English Literature and Creative Writing</h2>
+  <h2>BA/BSc (Honours) Open degree <a href="#" class="show-hide minus">Expand/collapse</a> </h2>
 
 
 <div class="box-expand-collapse-inner">
 
 <ul class="list-style1">
-  <li><strong>Code</strong>: Q86</li>
+  <li><strong>Code</strong>: QD</li>
   <li><strong>Status</strong>: in progress</li>
-  <li><strong>Credits</strong>: 0 of 360</li>
+  <li><strong>Credits</strong>: 180 of 360</li>
+  <li></li>
 </ul>
 
 <table class="qual-progress">
   <tr>
     <td colspan="3">
-    <div class="progress-bar"><span class="progress" style="width:0%;">0%</span></div>
+    <div class="progress-bar"><span class="progress" style="width:50%;">50%</span></div>
     </td>
     </tr>
   <tr>
@@ -177,13 +164,47 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
     <td>Stage 3</td>
   </tr>
 </table>
-<p><a href="interrupt-page.html" class="ou-btn">Choose next modules</a></p>
+<p><a href="next-module.html" class="ou-btn">Choose next modules</a></p>
+
 <hr>
-<p class="pdf-download">Download your <a href="#">Statement of Academic Record</a> for your BA (Honours) English Literature and Creative Writing</p>
+
+<h3>Awaiting resit</h3>
+<table>
+  <tr>
+    <td><a href="module-record.html"> Introducing the social sciences (DD102)</a></td>
+  </tr>
+</table>
+<h3>Enrolled modules</h3>
+<p class="loan-text">Student Finance England (SFE) has approved a <a href="your-loan-a.html">loan for 2015/2016</a>.</p>
+<table>
+  <tr>
+    <td><a href="module-record.html">Investigating the social world (DD103)</a></td>
+  </tr>
+</table>
+<h3>Completed modules</h3>
+<table>
+  <tr>
+    <td><a href="module-record.html"> Introducing the social sciences (DD102)</a></td>
+    <td>2014</td>
+    <td>Pass</td>
+  </tr>
+  <tr>
+    <td><a href="module-record.html">People, work and Society Access module (Y032)</a></td>
+    <td>2013</td>
+    <td>Pass</td>
+  </tr>
+</table>
+<p class="pdf-download">Download your <a href="#">Statement of Academic Record</a> for your BA (Honours) Humanities qualification</p>
 
 <hr>
 
 <dl class="show-hide">
+
+<dt>Open degree advisory routes</dt>
+<dd>
+<p>Read about the <a href="bd-advisory-routes.html">Open degree advisory routes</a>.</p>
+</dd>
+
 <dt>Educational aims and learning outcomes</dt>
 <dd>
    
@@ -247,6 +268,8 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 
 </div> <!-- end box-expand-collapse-inner -->
 </div> <!-- end box-expand-collapse -->
+ 
+
 
 <p><a href="profile.html">Back to Profile</a></p>
 
