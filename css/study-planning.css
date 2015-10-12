@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* GROUP TUITION - STUDENT STYLES */
+/* STUDY PLANNING */
 
 a:visited {color:#880088;}
 
@@ -14,6 +14,10 @@ div.inview {padding:1.5em 2em;}
 /* tables */
 
 table {margin-bottom:30px;}
+
+table tr {border-bottom: 1px solid #eee;}
+
+table tr:last-child {border-bottom: none;}
 
 table a {
 	color:#039;
@@ -124,7 +128,7 @@ table.two-cols tr td {width:50%;}
 }
 
 .r3 .box-downloads ul li {
-	background-image:url(../img/pdf.gif);
+	background-image:url(../img/icon-pdf.png);
 	background-position:0 .2em;
 	background-repeat:no-repeat;
 	padding:0 0 0 22px;
@@ -297,7 +301,7 @@ a.ou-btn:hover {
 p {margin:0 0 20px 0;}
 
 p.pdf-download {
-	background-image:url(../img/pdf.gif);
+	background-image:url(../img/icon-pdf.png);
 	background-position:0 .2em;
 	background-repeat:no-repeat;
 	padding:0 0 0 22px;
@@ -482,7 +486,7 @@ a.bannerhelp {
 	font-size:13px;
 }
 
-.ou-block {margin:0 0 30px 0;	}
+.ou-block {margin:0 0 30px 0;}
 
 .ou-profile .personal div,
 .ou-profile .study div,
@@ -491,6 +495,7 @@ a.bannerhelp {
 	background-image:url(../img/icon-personal.png);
 	background-position:top left;
 	background-repeat:no-repeat;	
+	min-height:64px;
 }
 
 .ou-profile .study div {background-image:url(../img/icon-study.png);}
@@ -501,6 +506,7 @@ a.bannerhelp {
 	font-size:1.2em;
 	margin-bottom:15px;	
 	padding-top:10px;
+	font-weight:bold;
 }
 
 hr {
@@ -551,7 +557,7 @@ ul.pdf {
 }
 
 ul.pdf li {
-	background-image:url(../img/pdf.gif);
+	background-image:url(../img/icon-pdf.png);
 	background-position:0 .2em;
 	background-repeat:no-repeat;
 	padding:0 0 0 22px;
@@ -649,5 +655,44 @@ h1 {color:#000;}
 
 } /* end media query */
 
+
+
+
+/*
+=========================
+	Retina
+=========================
+*/
+
+
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+
+
+ol.ou-breadcrumb li,
+.r3 .box-questions ul li {background-image: url(../img/menu-arrow-right@2x.png); background-size:5px 11px;}
+
+p.update-success {background-image:url(../img/icon-tick@2x.png); background-size:12px 12px;}
+
+.ou-profile .personal div {background-image:url(../img/icon-personal@2x.png); background-size:64px 64px;}
+
+.ou-profile .study div {background-image:url(../img/icon-study@2x.png); background-size:64px 64px;}
+
+.ou-profile .settings div {background-image:url(../img/icon-settings@2x.png); background-size:64px 64px;}
+
+ul.pdf li,
+p.pdf-download, 
+.r3 .box-downloads ul li {background-image:url(../img/icon-pdf@2x.png); background-size:16px 16px;}
+
+dl.show-hide dt.plus,
+.box-expand-collapse h2 a.plus {background-image:url(../img/switch-plus.png); background-size:16px 16px;}
+
+dl.show-hide dt.minus,
+.box-expand-collapse h2 a.minus {background-image:url(../img/switch-minus.png); background-size:16px 16px;}
+
+
+} /* end media query */
 
 
