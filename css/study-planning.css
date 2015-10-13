@@ -803,16 +803,16 @@ p.pdf-download,
 .r3 .box-downloads ul li {background-image:url(../img/icon-pdf@2x.png); background-size:16px 16px;}
 
 dl.show-hide dt.plus,
-.box-expand-collapse h2 a.plus {background-image:url(../img/switch-plus.png); background-size:16px 16px;}
+.box-expand-collapse h2 a.plus {background-image:url(../img/switch-plus@2x.png); background-size:16px 16px;}
 
 dl.show-hide dt.minus,
-.box-expand-collapse h2 a.minus {background-image:url(../img/switch-minus.png); background-size:16px 16px;}
+.box-expand-collapse h2 a.minus {background-image:url(../img/switch-minus@2x.png); background-size:16px 16px;}
 
-.next-module .next-module-change div {background-image:url(../img/icon-change.png); background-size:16px 16px;}
+.next-module .next-module-change div {background-image:url(../img/icon-change@2x.png); background-size:16px 16px;}
 
-.next-module .next-module-help div {background-image:url(../img/icon-help.png); background-size:16px 16px;}
+.next-module .next-module-help div {background-image:url(../img/icon-help@2x.png); background-size:16px 16px;}
 
-.next-module .next-module-time div {background-image:url(../img/icon-clock.png); background-size:16px 16px;}
+.next-module .next-module-time div {background-image:url(../img/icon-clock@2x.png); background-size:16px 16px;}
 
 
 } /* end media query */
