@@ -756,6 +756,12 @@ dl.ou-toc ul {
 	-webkit-column-count:1;	
 }
 
+.next-module-register {
+	border-left: 0;
+	padding-left:0;
+}
+
+
 } /* end media query */
 
 
