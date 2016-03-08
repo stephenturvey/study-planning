@@ -124,15 +124,19 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 <!-- PERSONA SWITCHER -->
 <form style="float:right; margin:12px 10px 0 0;">
   <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
-    <option value="study-record.html">Standard</option>
+   <option value="study-record.html">Standard</option>
     <option value="study-record-old-framework.html">Old Framework</option>
     <option value="study-record-open-degree.html">Open Degree</option>
-    <option value="study-record-access.html">Access Module</option>
+    <option value="study-record-access.html" selected>Access Module</option>
     <option value="study-record-resit.html">Resit</option>
+      <option value="study-record-failed-resit.html" selected>Failed resit</option>
     <option value="study-record-deferred.html">Deferred</option>
-    <option value="study-record-failed-cancelled.html" selected>Failed/Cancelled</option>
+    <option value="study-record-deferred-enrolled-next-pres.html">Deferred- enrolled next pres</option>
+    <option value="study-record-deferred-completed.html">Deferred - completed</option>
+    <option value="study-record-failed-cancelled.html">Failed/Cancelled</option>
     <option value="study-record-module-only.html">Module Only</option>
     <option value="study-record-finished-access.html">Finished Access</option>
+    <option value="study-record-moved-on-from-access.html">Moved on from Access</option>
   </select>
 </form>
 <!-- END SWITCHER -->

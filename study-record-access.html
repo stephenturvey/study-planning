@@ -122,15 +122,19 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 <!-- PERSONA SWITCHER -->
 <form style="float:right; margin:12px 10px 0 0;">
   <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
-    <option value="study-record.html">Standard</option>
+   <option value="study-record.html">Standard</option>
     <option value="study-record-old-framework.html">Old Framework</option>
     <option value="study-record-open-degree.html">Open Degree</option>
     <option value="study-record-access.html" selected>Access Module</option>
     <option value="study-record-resit.html">Resit</option>
+      <option value="study-record-failed-resit.html" selected>Failed resit</option>
     <option value="study-record-deferred.html">Deferred</option>
+    <option value="study-record-deferred-enrolled-next-pres.html">Deferred- enrolled next pres</option>
+    <option value="study-record-deferred-completed.html">Deferred - completed</option>
     <option value="study-record-failed-cancelled.html">Failed/Cancelled</option>
     <option value="study-record-module-only.html">Module Only</option>
     <option value="study-record-finished-access.html">Finished Access</option>
+    <option value="study-record-moved-on-from-access.html">Moved on from Access</option>
   </select>
 </form>
 <!-- END SWITCHER -->
@@ -145,27 +149,29 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
     <p>You can now enrol on modules starting between 1st September 2015 and 31st August 2016.</p>
     <p><a href="#" class="ou-btn">Choose next modules</a></p>
   </div>
-  <div class="box-expand-collapse">
-    <h2>Your current modules <a href="#" class="show-hide minus">Expand/collapse</a></h2>
-    <div class="box-expand-collapse-inner">
-      
-      <h3>Enrolled modules</h3>
-      <table>
-        <tr>
-          <td><a href="module-record.html">Arts and languages Access module (Y031) </a></td>
-          <td>Oct 2015</td>
-        </tr>
-      </table>
-    </div>
-    <!-- end box-expand-collapse-inner -->
-  </div>
-  <div class="box-expand-collapse">
+ 
     
     <h2>BA (Honours) <a href="#" class="show-hide minus">Expand/collapse</a> English Literature and Creative Writing (in progress)</h2>
 
 
 <div class="box-expand-collapse-inner">
-
+ <div class="box-expand-collapse">
+    <h2>Your Access module <a href="#" class="show-hide minus">Expand/collapse</a></h2>
+    <div class="box-expand-collapse-inner">
+    <p>This is your first step on your journey towards a qualfication.</p>
+      <table>
+        <tr>
+          <td><a href="module-record.html">Arts and languages Access module (Y031) </a></td>
+          <td>Oct 2015</td>
+          <td>30 credits</td>
+          <td>Enrolled</td>
+        </tr>
+      </table>
+      <p>Looking to your next module? <a href="#">Take a look at Moving on from Access</a></p>
+    </div>
+    <!-- end box-expand-collapse-inner -->
+  </div>
+  <div class="box-expand-collapse">
 <ul class="list-style1">
   <li><strong>Code</strong>: Q86</li>
  <!-- <li><strong>Status</strong>: in progress</li>-->

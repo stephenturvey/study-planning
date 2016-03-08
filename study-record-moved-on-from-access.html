@@ -53,14 +53,13 @@ $(document).ready(function(){
 	return false;
 	})
 	
-});	
+});
 
 // PERSONA SWITCHER ONLY -- CAN BE DELETED AFTER!
 function MM_jumpMenu(targ,selObj,restore){ //v3.0
   eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
   if (restore) selObj.selectedIndex=0;
 }
-
 
 </script>
 
@@ -75,7 +74,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
       <li class="ou-role-accessibility"><a href="#">Accessibility</a></li>
       <li class="ou-role-signin" id="ou-signin1"><a href="#" id="ou-signin2">Sign in</a></li>
       <li id="ou-signout" class="ou-role-signout"><a href="#" id="ou-signout2">/ Sign out</a></li>
-      <li id="ou-studenthome" class="ou-role-studenthome"><a href="/index.html" id="ou-studenthome2">StudentHome</a></li>
+      <li id="ou-studenthome" class="ou-role-studenthome"><a href="index.html" id="ou-studenthome2">StudentHome</a></li>
       <li id="ou-tutorhome" class="ou-role-tutorhome"><a href="#">TutorHome</a></li>
       <li id="ou-intranet" class="ou-role-intranet"><a href="#">IntranetHome</a></li>
       <li id="ou-sponsor" class="ou-role-sponsor"><a href="#">SponsorHome</a></li>
@@ -140,25 +139,33 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 </form>
 <!-- END SWITCHER -->
 
+
+
 <h1 class="h1main">Study record</h1>
 
 <div class="inview">
+  <div class="box-alert">
+    <h2>Enrol on modules</h2>
+    <p>You can now enrol on modules starting between 1st September 2015 and 31st August 2016.</p>
+    <p><a href="#" class="ou-btn">Choose next modules</a></p>
+  </div>
   <div class="box-expand-collapse">
     
-  <h2>BA/BSc (Honours) Open degree (in progress)<a href="#" class="show-hide minus">Expand/collapse</a> </h2>
+    <h2>BA (Honours) <a href="#" class="show-hide minus">Expand/collapse</a> English Language and Literature (in progress)</h2>
 
 
 <div class="box-expand-collapse-inner">
 
 <ul class="list-style1">
-  <li><strong>Code</strong>: QD</li>
-  <li><strong>Credits</strong>: 180 of 360</li>
-<li><a href="#">View qualification description</a></li></ul>
+  <li><strong>Code</strong>: Q39</li>
+  <li><strong>Credits</strong>: 60 of 360</li>
+  <li><a href="#">View qualification description</a></li>
+</ul>
 
 <table class="qual-progress">
   <tr>
     <td colspan="3">
-    <div class="progress-bar"><span class="progress" style="width:50%;">50%</span></div>
+    <div class="progress-bar"><span class="progress" style="width:15%;">15%</span></div>
     </td>
     </tr>
   <tr>
@@ -167,66 +174,52 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
     <td>360 credits</td>
   </tr>
 </table>
-<p><a href="next-module.html" class="ou-btn">Choose next modules</a></p>
+<p><a href="interrupt-page.html" class="ou-btn">Choose next modules</a></p>
+<hr>
+<p class="pdf-download">Download your <a href="#">Statement of Academic Record</a> for your BA (Honours) English Language and Literature</p>
 
 <hr>
 
-<h3><strong id="docs-internal-guid-42ebb8af-3d2c-9568-9a7b-4291b7f39be8">Resits, resubmissions and postponements </strong></h3>
+<h3>Enrolled modules</h3>
 <table>
   <tr>
-    <td><a href="module-record.html"> Introducing the social sciences (DD102)</a></td>
-    <td>Feb 2016</td>
-    <td>60 credits</td>
-    <td>Resit</td>
-  </tr>
-</table>
-<h3>Current modules</h3>
-
-<table>
-  <tr>
-    <td><a href="module-record.html">Investigating the social world (DD103)</a></td>
+    <td><a href="module-record.html">Voices, texts and material culture (A105)</a></td>
     <td>Oct 2015</td>
     <td>60 credits</td>
     <td>Enrolled</td>
   </tr>
 </table>
-
-<h3>Postponed or entitled to resit or resubmit</h3>
-<table>
-  <tr>
-    <td><a href="module-record.html"> Introducing the social sciences (DD102)</a></td>
-    <td>Oct 2014</td>
-    <td>60 credits</td>
-    <td>Entitled to resit</td>
-  </tr>
- 
-</table>
-
-
 <h3>Completed modules</h3>
 <table>
-
   <tr>
-    <td><a href="module-record.html">People, work and Society Access module (Y032)</a></td>
-    <td>Feb 2013</td>
-    <td>30 credits</td>
+    <td height="21"><a href="module-record.html">The arts and the present (AA100)</a></td>
+    <td>Oct 2014</td>
+    <td>60 credits</td>
     <td>Pass</td>
   </tr>
 </table>
 
+<div class="box-expand-collapse">
+    <h2>Your Access module <a href="#" class="show-hide minus">Expand/collapse</a></h2>
+    <div class="box-expand-collapse-inner">
+    <p>Your Access module represents your first step towards a qualification. The credit from it does not count towards your qualification but it means you are better prepared for your studies.      </p>
+    <table>
+      <tr>
+          <td><a href="module-record.html">Starting with psychology (Y183)</a></td>
+          <td>Oct 2013</td>
+          <td>30 credits</td>
+          <td>Pass</td>
+        </tr>
+  </table>
+    </div>
+    <!-- end box-expand-collapse-inner -->
+  </div> 
+  <!-- end box-expand-collapse -->
 
-<p class="pdf-download">Download your <a href="#">Statement of Academic Record</a> for your BA (Honours) Humanities qualification</p>
 
-<hr>
 
 <dl class="show-hide">
-
-<dt>Open degree advisory routes</dt>
-<dd>
-<p>Read about the <a href="bd-advisory-routes.html">Open degree advisory routes</a>.</p>
-</dd>
-
-<dt>Educational aims and learning outcomes</dt>
+  <dt>Educational aims and learning outcomes</dt>
 <dd>
    
     
@@ -269,7 +262,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 <p class="pdf-download"><a href="#">Download statement (Adobe PDF, 60K)</a></p>
 </dd>
  
-
+  
 
   <dt>Regulations</dt>
 <dd>
@@ -285,24 +278,8 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 </dl>
 
 </div> <!-- end box-expand-collapse-inner -->
-</div> <!-- end box-expand-collapse -->
- 
-<!--<div class="box-expand-collapse collapsed">
-    <h2>Other  modules <a href="#" class="show-hide minus">Expand/collapse</a></h2>
-
- <div class="box-expand-collapse-inner">
-   
-      <table>
-        <td><a href="module-record.html"> Introducing the social sciences (DD102)</a></td>
-    <td>Oct 2014</td>
-    <td>Entitled to resit</td>
-      </table>
-    </div>
-    <!-- end box-expand-collapse-inner -->
-  </div> 
-  <!-- end box-expand-collapse -->
-
-
+</div>
+  
 <p><a href="profile.html">Back to Profile</a></p>
 
 </div>
@@ -324,7 +301,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 </ul>
   
 <p class="box-link"><a href="#">Get more from the Help Centre</a></p>
-
+<p class="box-link"><a href="#">Your student loan</a></p>
 </div>
 
 <div class="box box-downloads">
