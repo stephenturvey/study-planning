@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Study record - Open University</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+<link rel="stylesheet" type="text/css" href="includes/headers-footers/ou-header.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="includes/ouice/3/screen.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="includes/ouice/3/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="includes/studenthome-header-2012.css" />
+<link rel="stylesheet" type="text/css" href="css/site11.css" />
+
+<!-- new stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/study-planning.css" />
+
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="includes/ouice/3/ie.css" />
+<link rel="stylesheet" href="css/sh-ie.css" />
+<![endif]-->
+
+<!--[if lt IE 7]>
+<link rel="stylesheet" href="css/sh-ie6.css" />
+<![endif]-->
+
+<script type="text/javascript" src="includes/headers-footers/ou-header.js"></script>
+<script type="text/javascript" src="includes/studenthome-menu-2012.js"></script>
+<script type="text/javascript" src="js/site.js"></script>
+
+<!-- new meta tag -->
+<meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9, user-scalable=no" />
+
+<!-- new jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	
+	$("dl.show-hide dt").addClass("plus");
+	$("dl.show-hide dd").hide();
+	$("dl.show-hide dt").click(function(){
+		$(this).toggleClass("plus minus");
+		$(this).next().slideToggle("fast");
+	return false;
+	})
+
+	
+	$("div.collapsed .box-expand-collapse-inner").hide();
+	$("a.show-hide").click(function(){
+		$(this).toggleClass("plus minus");
+		$(this).parent().parent().toggleClass("collapsed");
+		$(this).parent().next(".box-expand-collapse-inner").slideToggle("fast");
+	return false;
+	})
+	
+});
+
+// PERSONA SWITCHER ONLY -- CAN BE DELETED AFTER!
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+
+</script>
+
+</head>
+
+<body class="ou-ia-learning ou-blend study r2r3 sh-profile ou-mobile" onload="boot()">
+<script type="text/javascript">if (typeof window.ou_sitestat=='function')ou_sitestat();</script>
+<!--<script type="text/javascript" src="includes/headers-footers/ou-cookie-policy.js"></script>-->
+<div id="ou-org-header"> <a class="ou-skip" href="#">Skip to content</a> <a class="ou-link-ou" href="#"><img src="includes/headers-footers/oulogo-56.jpg" alt="The Open University" /></a>
+  <div class="ou-role-nav">
+    <ul>
+      <li class="ou-role-accessibility"><a href="#">Accessibility</a></li>
+      <li class="ou-role-signin" id="ou-signin1"><a href="#" id="ou-signin2">Sign in</a></li>
+      <li id="ou-signout" class="ou-role-signout"><a href="#" id="ou-signout2">/ Sign out</a></li>
+      <li id="ou-studenthome" class="ou-role-studenthome"><a href="index.html" id="ou-studenthome2">StudentHome</a></li>
+      <li id="ou-tutorhome" class="ou-role-tutorhome"><a href="#">TutorHome</a></li>
+      <li id="ou-intranet" class="ou-role-intranet"><a href="#">IntranetHome</a></li>
+      <li id="ou-sponsor" class="ou-role-sponsor"><a href="#">SponsorHome</a></li>
+      <li id="ou-contact" class="ou-role-contact"><a href="#">Contact</a></li>
+      <li id="ou-search" class="ou-role-search"><a href="#">Search the OU</a></li>
+    </ul>
+  </div>
+  <div class="ou-ia-nav">
+    <ul>
+      <li class="ou-ia-home"><a href="#">The Open University</a></li>
+      <li class="ou-ia-study"><a href="#">Study at the OU</a></li>
+      <li class="ou-ia-research"><a href="#">Research at the OU</a></li>
+      <li class="ou-ia-community"><a href="#">OU Community</a></li>
+      <li class="ou-ia-about"><a href="#">About the OU</a></li>
+    </ul>
+  </div>
+</div>
+<div class="canvas">
+
+<div class="mnuwrap"><div class="sh-header" role="navigation">
+<ul>
+<li class="sh-home"><a href="studenthome.html">StudentHome</a></li>
+<li class="sh-profile"><a href="profile.html" class="selected">Profile</a></li>
+<li class="sh-study"><a href="study.html" onmouseover="ioe_showmenu(3)" onmouseout="ioe_hidemenu()" onclick="ioe_hidemenu()">Study</a></li>
+<li class="sh-community"><a href="#">Community</a></li>
+<li class="sh-help"><a href="#">Help Centre</a></li>
+</ul>
+</div></div><div id="sh-header-menu"></div>
+
+
+
+
+<div class="grid">
+
+
+<ol class="ou-breadcrumb">
+	<li><a href="studenthome.html">StudentHome</a></li>
+	<li><a href="profile.html">Profile</a></li>
+	<li>Study record</li></ol>
+
+
+<div class="r2">
+<div class="ou-content" id="ou-content">
+
+<!-- PERSONA SWITCHER -->
+<form style="float:right; margin:12px 10px 0 0;">
+  <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
+  <option value="study-record.html">Standard</option>
+    <option value="study-record-old-framework.html">Old Framework</option>
+    <option value="study-record-open-degree.html">Open Degree</option>
+    <option value="study-record-access.html">Access Module</option>
+    <option value="study-record-resit.html">Resit</option>
+      <option value="study-record-failed-resit.html">Failed resit</option>
+    <option value="study-record-deferred.html">Deferred</option>
+    <option value="study-record-deferred-enrolled-next-pres.html">Deferred- enrolled next pres</option>
+    <option value="study-record-deferred-completed.html">Deferred - completed</option>
+    <option value="study-record-failed-cancelled.html">Failed/Cancelled</option>
+    <option value="study-record-module-only.html">Module Only</option>
+    <option value="study-record-finished-access.html">Finished Access</option>
+    <option value="study-record-moved-on-from-access.html">Moved on from Access</option>
+    <option value="study-record-not-studying.html" selected>Not studying</option>
+     <option value="study-record-on-break.html">On break</option>
+     <option value="study-record-break-ended.html">Break ended</option>
+  </select>
+    If you're planning to start studying again from September 2016 you can enrol now. The deadline for enroling on most modules is [Oct FED for next AY]. If you need to extend your study break, update your study status.
+  </select>
+</form>
+<!-- END SWITCHER -->
+
+
+
+<h1 class="h1main">Study record</h1>
+
+<div class="inview">
+
+
+<div class="box-alert">
+<!--message 2SH-->
+    <h2>Tell us your plans</h2>
+    <p>According to our records you are not currently studying. You need to let us know if you're  taking a break, <a href="http://stephenturvey.github.io/study-planning/study-status.html">update your study status</a>.</p>
+    <!--end message 2SH-->
+</div>
+<div class="box-expand-collapse">
+  
+  <h2 id="qual1">Bachelor of Engineering (Honours) (in progess) <a href="#" class="show-hide minus">Expand/collapse</a> </h2>
+
+
+<div class="box-expand-collapse-inner">
+
+<ul class="list-style1">
+  <li><strong>Code</strong>: Q65</li>
+  <li><strong>Credits</strong>: 180 of 360</li>
+  <li><strong>Pathway</strong>: Engineering design</li>
+  <li><a href="#">View qualification description</a></li></ul>
+</ul>
+
+<table class="qual-progress">
+  <tr>
+    <td colspan="3">
+    <div class="progress-bar"><span class="progress" style="width:50%;">50%</span></div>
+    </td>
+    </tr>
+  <tr>
+    <td>120 credits</td>
+    <td>240 credits</td>
+    <td>360 credits</td>
+  </tr>
+</table>
+<p><a href="interrupt-page.html" class="ou-btn">Choose next modules</a></p>
+<hr>
+
+
+<h3>Completed modules</h3>
+
+<table>
+  <tr>
+    <td><a href="module-record.html"> Engineering: mechanics, materials, design (T207)</a></td>
+    <td>Oct 2014</td>
+    <td>60 credits</td>
+    <td>Grade 3 pass</td>
+  </tr>
+  <tr>
+    <td><a href="module-record.html">Engineering: professions, practice and skills 1 (T176)</a></td>
+    <td>Feb 2014</td>
+     <td>60 credits</td>
+    <td>Pass</td>
+  </tr>
+  <tr>
+    <td><a href="module-record.html">Exploring mathematics (MS221)</a></td>
+    <td>Oct 2013</td>
+     <td>30 credits</td>
+    <td>Grade 4 pass</td>
+  </tr>
+  <tr>
+    <td><a href="module-record.html">Using mathematics (MST121)</a></td>
+    <td>Feb 2013</td>
+     <td>60 credits</td>
+    <td>Grade 3 pass</td>
+  </tr>
+  <tr>
+    <td><a href="module-record.html">Engineering the future (T173)</a></td>
+    <td>Oct 2012</td>
+     <td>30 credits</td>
+    <td>Distinction</td>
+  </tr>
+</table>
+<h3>Credit transfer</h3>
+<p>You have been awarded 60 credits towards this qualification</p>
+<p class="pdf-download">Download your <a href="#">Statement of Academic Record</a> for your BA (Honours) Humanities qualification</p>
+
+<hr>
+
+<dl class="show-hide">
+  <dt>Qualification Regulations</dt>
+  <dd>
+    <p>These are the regulations that apply to any modules you complete as part of your qualification.</p>
+    <p>Regulations specific to your qualification: <a id="ctl00_cphCEN_hypQualRegulation" href="http://www.open.ac.uk/courses/contentlibrary/qualifications/undergraduate/stagebasedprospectus/q65/reg-sbq65">Bachelor of Engineering (Honours)</a></p>
+    <p>General regulations:</p>
+    <ul>
+      <li><a href="">Conditions of registration 2016/17</a></li>
+      <li><a href="">Fee rules 2016/17</a></li>
+      <li><a href="">Academic regulations (taught courses) 2016</a></li></ul>
+      <p>You can find further regulation documents on <a href="http://www.open.ac.uk/students/charter/essential-documents/registration-as-a-student">Essential Documents</a></p>
+    </ul>
+  
+  </dd>
+  <dt>Educational aims and learning outcomes</dt>
+<dd>
+   
+    
+    <h3>Educational aims</h3> <p>Professionals working in the IT sector bring many different kinds of expertise to their work. The aim of this degree is to equip you with the knowledge and skills you will need to underpin a career in this sector. As well as developing your knowledge and understanding of the fundamental technologies and techniques and the issues involved in their application, it will also:</p>
+<ul>
+<li>enable you to keep ahead in a rapidly changing subject area by helping you to develop as an independent learner</li>
+<li>develop relevant skills in communication, numeracy, and collaborative working</li>
+<li>imbue the qualities that come with being a graduate in any discipline: specialist knowledge, intellectual self-confidence and independence, analytical ability and the life-long learning skills needed to keep up with fast-changing technologies</li>
+<li>enable you to apply your learning in your private, social and professional life.</li>
+</ul>
+<p>And, depending on the pathway you choose through the degree, you may gain:</p>
+<ul>
+<li>practical experience in the use of information and communication technologies</li>
+<li>an understanding of the types of software and ICT systems that are now being constructed and used, such as distributed internet systems, intelligent systems and databases, and the digital network that underlies the internet itself</li>
+<li>a grasp of the key concepts of computing and of modern computer systems</li>
+<li>skills in the main tasks that are carried out as software is built and maintained, such as analysis, design, programming and evaluation.&nbsp;</li>
+</ul><h3>Learning outcomes</h3><h4>Knowledge and Understanding</h4><ul><li>a broad critical understanding of the fundamental principles, concepts and techniques underlying Computing and IT</li><li>a range of models and languages to support the analysis and design of Computing and IT systems</li><li>the range of situations in which Computing and IT systems are used, the ways in which people interact with them, and the possibilities and limitations of such systems</li><li>an awareness of major trends in computing and IT and of the implications of these trends</li><li>a critical awareness of the ethical, social and legal issues that can be associated with the development and deployment of Computing and IT systems.</li></ul><h4>Cognitive Skills</h4><ul><li>apply and critically evaluate key computing and IT concepts in a range of contexts</li><li>select and apply appropriate techniques and tools for abstracting, modelling, problem-solving, designing and testing computing and IT systems, and be aware of the limitations involved</li><li>compare, contrast, critically analyse and refine specifications and implementations of software systems and/or simple hardware systems</li><li>devise and carry out a project in computing and IT that applies and extends your knowledge and understanding, and critically reflect on the processes involved and the outcomes of your work.</li></ul><h4>Key Skills</h4><ul><li>communicate information, arguments, ideas and issues clearly and in appropriate ways;, bearing in mind the audience for and the purpose of your communication</li><li>work in a group, communicating effectively in a distance setting where the communication is computer-mediated</li><li>work independently, planning, monitoring, reflecting on and improving your own learning</li><li>find, assess and apply information from a variety of sources, using information technology where necessary</li><li>select and use accurately, appropriate numerical and analytical techniques to solve problems</li><li>recognise and understand a range of technological problems and select suitable techniques for solving them.</li></ul><h4>Practical and/or Professional Skills</h4><ul><li>analyse, design, evaluate and/or test computing and IT systems, using appropriate simulation and modelling tools where appropriate</li><li>plan and organise yourself and your work appropriately, including keeping systematic records of work in progress and outcomes</li><li>demonstrate the ability to undertake ongoing learning in order to keep up to date with computing and IT</li><li>identify and address the ethical, social and legal issues that may arise during the development and use of Computing and IT systems</li><li>use appropriate professional tools to support your work.</li></ul>
+
+
+
+
+
+</dd>
+
+<dt>Qualification End Date</dt>
+
+<dd>
+<p>This qualification has to be completed within 12 years. Your first credit counting towards this qualification is dated 06-Oct-2012 which means that you must complete this qualification by 06-Oct-2024.</p>
+</dd>
+
+<dt>Residential School Fees</dt>
+<dd>
+<p>This qualification contains a compulsory residential-school module. All students attending residential schools are responsible for the cost of travel to the venue, incidental expenses and an additional charge of £260 is payable for the cost of accommodation and meals.</p>
+</dd>
+
+
+
+  <dt>Qualification Fee</dt>
+<dd>
+  <p>The total cost of the qualification is determined by the combined cost of the individual modules required to complete it. Each module has an individual fee. There are also additional costs associated with study such as technology, travel to tutorials, set books and internet access which are not included in module fees.</p>
+</dd>
+
+</dl>
+
+</div> <!-- end box-expand-collapse-inner -->
+</div> <!-- end box-expand-collapse -->
+
+<div class="box-expand-collapse collapsed">
+  
+  <h2 id ="qual2">Certificate in Humanities (completed)<a href="#" class="show-hide plus">Expand/collapse</a></h2>
+    
+    <div class="box-expand-collapse-inner">
+    <ul class="list-style1">
+      <li><strong>Code</strong>: C36</li>
+      <li><strong>Credits</strong>: 360 of 360</li>
+      <strong> <li><a href="#">View qualification description</a></li> 
+    </ul>
+    
+    <table class="qual-progress">
+      <tr>
+        <td colspan="3"><div class="progress-bar"><span class="progress" style="width:100%;">100%</span></div></td>
+      </tr>
+      <tr>
+        <td>120 credits</td>
+        <td>240 credits</td>
+        <td>360 credits</td>
+      </tr>
+    </table>
+    
+    <p>There would be more information here.</p>
+    
+	</div>
+
+</div> 
+
+
+
+<div class="box-expand-collapse collapsed">
+  
+  <h2 id ="qual2">Qualification history<a href="#" class="show-hide plus">Expand/collapse</a></h2>
+    
+    <div class="box-expand-collapse-inner">
+    
+  
+    
+    <p>You have previously studied towards:</p>
+    <h3>BSc (Hons) Mathematics (Q11) </h3>
+    <p>You stopped studying towards this qualification on 24 February 2014</p>
+       <p>If you changed to a different qualification any completed modules that were eligible to transfer can be found under that qualification. Any other modules can be found under 'Completed modules' or 'Other modules'.</p>
+    
+    <h3>BA (Hons) Health and Social Care (Q01)</h3>
+    <p>This qualification was withdrawn by the university on 31 December 2010.</p>
+    <p>Any modules that were counting towards this qualification will appear above under 'Completed modules' if you are not counting them towards another qualification.</p>
+    
+	</div>
+
+</div> 
+
+
+
+
+
+
+<p><a href="profile.html">Back to Profile</a></p>
+
+</div>
+
+</div>
+</div>
+
+<div class="r3 aside">
+
+<div class="box box-questions">
+<h2>Your Qualifications</h2>
+<p>View information for...
+<ul>
+  <li><a href="#qual1">Bachelor of Engineering (Honours)</a></li>
+<li><a href="#qual2">Certficate in Humanities</a></li>
+</ul>
+</div>
+
+
+
+<div class="box box-questions">
+<h2>How do I?</h2>
+<ul>
+  <li><a href="#">Change my qualification?</a></li>
+  <li><a href="#">Change my module?</a></li>
+  <li><a href="#">Take a break from my studies</a>?</li>
+  <li><a href="#">Apply for a tuition fee loan?</a></li>
+  <li><a href="#">Get help studying for a disability?</a></li>
+</ul>
+  
+<p class="box-link"><a href="#">Get more from the Help Centre</a></p>
+<p class="box-link"><a href="#">Your student loan</a></p>
+</div>
+
+<div class="box box-downloads">
+<h2>Student Academic Summary</h2>
+<ul>
+  <li><a href="#">Download a summary of all your OU study</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</div>
+</div>
+<div id="ou-org-footer">
+
+<div class="ou-grid ou-mobile-footer" id="ou-mobile-jlinks"></div>
+
+<div class="ou-grid ou-footer-links">
+  <div class="ou-c1of4">
+    <ul>
+      <li class="ou-title"><a href="#">The Open University</a></li>
+      <li class="ou-copyright">&#169; Copyright <span id="sbyear"></span>. All rights reserved</li>
+      <li class="ou-phone" id="ou-phone1">+44 (0)300 303 5303</li>
+      <li class="ou-email"><a href="#">Contact us</a></li>
+      <li class="ou-study"><a href="#">Study at the OU</a></li>
+      <li class="ou-research"><a href="#">Research</a></li>
+      <li class="ou-community"><a href="#">Community</a></li>
+      <li class="ou-about"><a href="#">About</a></li>
+      <li class="ou-accessibility"><a href="#">Accessibility</a></li>
+    </ul>
+  </div>
+  <div class="ou-c2of4">
+    <ul>
+    <li class="ou-contact"><a href="#">Contact</a></li>
+      <li class="ou-search"><a href="#">Search</a></li>
+      <li class="ou-privacy"><a href="#">Privacy and cookies</a></li>
+      <li class="ou-copyright"><a href="#">Copyright</a></li>
+      <li class="ou-conditions"><a href="#">Conditions of use</a></li>
+      <li class="ou-cymraeg"><a href="#">Cymraeg</a></li>
+      <li class="ou-mobile-enquiries" id="ou-phone2">0300 303 5303</li>
+    </ul>
+  </div>
+  <div class="ou-c3of4">
+    <ul>
+      <li class="ou-ia-study"><a href="#">Undergraduate</a></li>
+      <li class="ou-ia-study"><a href="#">Postgraduate</a></li>
+      <li class="ou-ia-study ou-ia-research"><a href="#">Research degrees</a></li>
+      <li class="ou-ia-home ou-ia-study"><a href="#">Employers</a></li>
+      <li class="ou-ia-about"><a href="#">OU explained</a></li>
+      <li class="ou-ia-about"><a href="#">Faculties and centres</a></li>
+      <li class="ou-ia-about"><a href="#">Admin and governance</a></li>
+      <li class="ou-ia-about ou-ia-home"><a href="#">Press Room</a></li>
+      <li class="ou-ia-home"><a href="#" class="ou-home">Alumni</a></li>
+      <li class="ou-ia-home ou-ia-research ou-ia-about"><a href="#">Jobs</a></li>
+      <li class="ou-ia-home"><a href="#">Donate</a></li>
+      <li class="ou-ia-community"><a href="#">Platform</a></li>
+      <li class="ou-ia-community"><a href="#">OpenLearn</a></li>
+      <li class="ou-ia-community"><a href="#">Facebook</a></li>
+      <li class="ou-ia-community"><a href="#">Twitter</a></li>
+      <li class="ou-ia-community"><a href="#">YouTube</a></li>
+      <li class="ou-ia-learning"><a href="#">StudentHome</a></li>
+      <li class="ou-ia-learning"><a href="#">Learning Support</a></li>
+      <li class="ou-ia-learning"><a href="#">Library</a></li>
+    </ul>
+  </div>
+  <div class="ou-charter">The Open University is incorporated by Royal Charter (RC 000391), an <a href="#">exempt charity</a> in England &amp; Wales and a charity registered in Scotland (SC 038302).</div>
+  <div class="ou-charter"><br />Open University Student Budget Accounts Limited (OUSBA) is a wholly owned subsidiary of The Open University, Companies House number 303735 and until 31 March 2014 was licensed by the Office of Fair Trading (OFT) under licence number 573250 and from 1 April 2014 is authorised and regulated by the Financial Conduct Authority (FCA) under interim permission number 573250.</div>
+  <div class="ou-c4of4"><!-- reserved --></div>
+  </div>
+    
+</div>
+
+<script type="text/javascript">if (typeof window.ou_init=='function')ou_init();</script>
+</body>
+</html>
