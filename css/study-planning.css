@@ -72,6 +72,10 @@ table.qual-progress span.progress {
 
 table.two-cols tr td {width:50%;}
 
+td.col-title {width:65%;}
+td.col-date {width:10%;}
+td.col-credits {width:10%;}
+td.col-status {width:15%;}
 
 /**/
 
