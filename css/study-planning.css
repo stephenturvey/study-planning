@@ -310,6 +310,11 @@ dl.ou-toc {
     border-bottom: 1px solid #eee;
 }
 
+.aside dl.ou-toc {
+	border-bottom:0;
+	margin:10px 0 0 20px;
+}
+
 dl.ou-toc dt {
     font-weight: bold;
     border-bottom: none;
@@ -318,12 +323,27 @@ dl.ou-toc dt {
 	font-family:Arial, Helvetica, sans-serif;
 }
 
+.aside dl.ou-toc dt {
+	font-size:1.1em;	
+}
+
+.aside dl.ou-toc p {
+	color:#777;
+	margin-bottom:10px;
+}
+
 dl.ou-toc ul {
 	-moz-column-count:2;
 	column-count:2;
 	-webkit-column-count:2;	
 	padding:0;
 	margin:0;
+}
+
+.aside dl.ou-toc ul {
+	-moz-column-count:1;
+	column-count:1;
+	-webkit-column-count:1;	
 }
 
 dl.ou-toc ul li {
@@ -542,6 +562,16 @@ p.update-error {
 
 
 /* misc */
+
+a.icon-loan {
+	background-image:url(../img/icon-loan.png);
+	background-position:top left;
+	background-repeat:no-repeat;
+	padding:7px 0 7px 42px;
+	display:inline-block;
+	font-family:Arial, Helvetica, sans-serif;
+	text-decoration:none;
+}
 
 .box-calculator input[type=text] {
 	padding:3px 5px;	
