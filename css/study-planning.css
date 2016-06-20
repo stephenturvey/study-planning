@@ -481,7 +481,7 @@ ol.ou-breadcrumb {margin:20px 0 5px 0;}
 ol.ou-breadcrumb li {
 	display:inline;
 	background-image: url(../img/menu-arrow-right.png);
-    background-position: 0 .3em;
+    background-position: 0 2px;
     background-repeat: no-repeat;
 	padding-left:10px;
 	margin-right:5px;
@@ -591,6 +591,8 @@ a.icon-loan {
 	padding:7px 0 7px 42px;
 	display:inline-block;
 	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:1.1em;
 	text-decoration:none;
 }
 
