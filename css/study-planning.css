@@ -77,6 +77,20 @@ td.col-date {width:10%;}
 td.col-credits {width:10%;}
 td.col-status {width:15%;}
 
+
+/* alt table */
+
+table.alt tr {border-bottom:none;}
+
+table.alt tr th,
+table.alt tr td {border:1px solid #ddd;}
+
+table.alt tr:nth-of-type(even) td,
+table.alt tr:nth-of-type(even) th {
+	background-color:transparent;
+}
+	
+
 /**/
 
 /* boxes */
