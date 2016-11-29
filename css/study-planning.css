@@ -138,7 +138,13 @@ table.alt tr:nth-of-type(even) th {
 	color:#fff;
 }
 
-.r3 .box-questions ul li {
+.r3 .box-links h2 {
+	background:#555;
+	color:#fff;
+}
+
+.r3 .box-questions ul li,
+.r3 .box-links ul li {
 	background-image:url(../img/menu-arrow-right.png);
 	background-position:0 .4em;
 	background-repeat:no-repeat;
@@ -804,7 +810,7 @@ div.table-wrap {
 
 
 @media screen and (max-width: 640px) {
-	
+
 div.ou-c1of3,
 div.ou-c2of3,
 div.ou-c3of3 {
